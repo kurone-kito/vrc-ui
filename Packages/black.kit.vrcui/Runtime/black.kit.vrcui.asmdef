@@ -1,9 +1,11 @@
 {
-    "name": "VRChatPackageTemplate.Editor",
-    "references": [],
-    "includePlatforms": [
-        "Editor"
+    "name": "black.kit.vrcui",
+    "rootNamespace": "black.kit.vrcui",
+    "references": [
+        "VRC.SDK3",
+        "VRC.SDKBase"
     ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
