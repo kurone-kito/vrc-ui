@@ -18,4 +18,4 @@ Unity uGUI theme for VRChat.
 
 ## License
 
-This repository is licensed under the [MIT License](LICENSE).
+This repository is licensed under the [CC-BY-NC 4.0](LICENSE).
