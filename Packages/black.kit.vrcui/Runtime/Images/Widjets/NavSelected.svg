@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487 122">
+  <defs>
+    <style>
+      .h {
+        fill: url(#e);
+      }
+
+      .h, .i, .j {
+        stroke-width: 0px;
+      }
+
+      .i {
+        fill: url(#g);
+      }
+
+      .k {
+        clip-path: url(#d);
+      }
+
+      .l {
+        fill: none;
+        stroke: #619eae;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+
+      .m {
+        filter: url(#b);
+      }
+
+      .j {
+        fill: url(#f);
+      }
+    </style>
+    <filter id="b" data-name="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="c" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="c" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="d">
+      <path class="l" d="M12.5,2.5h462c5.5,0,10,4.5,10,10v97c0,5.5-4.5,10-10,10H47.5c-24.8,0-45-20.2-45-45V12.5C2.5,7,7,2.5,12.5,2.5Z"/>
+    </clipPath>
+    <linearGradient id="e" data-name="名称未設定グラデーション 53" x1="2.5" y1="61" x2="484.5" y2="61" gradientUnits="userSpaceOnUse">
+      <stop offset=".1" stop-color="#0c1c1f"/>
+      <stop offset=".6" stop-color="#122328"/>
+      <stop offset="1" stop-color="#0c1c1f"/>
+    </linearGradient>
+    <linearGradient id="f" data-name="名称未設定グラデーション 69" x1="2.5" y1="61" x2="157.5" y2="61" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#12363c"/>
+      <stop offset="1" stop-color="#27484d"/>
+    </linearGradient>
+    <linearGradient id="g" data-name="名称未設定グラデーション 67" x1="243.5" y1="119.3" x2="243.5" y2="2.3" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2d3c44"/>
+      <stop offset="1" stop-color="#0c1c1f" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g class="m">
+    <g class="k">
+      <g>
+        <rect class="h" x="2.5" y="2.5" width="482" height="117"/>
+        <path class="j" d="M66.8,2.5c-.1,20.1,19.7,50,39.7,76s44,41,50.6,41c9.4,0-154.6,0-154.6,0V2.5h64.3Z"/>
+        <rect class="i" x="2.5" y="2.3" width="482" height="117"/>
+      </g>
+    </g>
+    <path class="l" d="M12.5,2.5h462c5.5,0,10,4.5,10,10v97c0,5.5-4.5,10-10,10H47.5c-24.8,0-45-20.2-45-45V12.5C2.5,7,7,2.5,12.5,2.5Z"/>
+  </g>
+</svg>
