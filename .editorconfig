@@ -1,0 +1,42 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{asmdef,cs,uss}]
+indent_size = 4
+
+[*.{asset,md,meta,prefab,unity}]
+trim_trailing_whitespace = false
+
+[*.cs]
+dotnet_diagnostic.IDE0066.severity = none
+
+[Assets/UdonSharp/**.txt]
+indent_size = 4
+
+[LICENSE]
+generated_code = true
+
+[Packages/com.*/**]
+insert_final_newline = false
+
+[Packages/dev.*/**]
+insert_final_newline = false
+
+[ProjectSettings/**]
+insert_final_newline = false
+
+[ProjectSettings/Packages/**.json]
+indent_size = 4
+
+[ProjectSettings/SceneTemplateSettings.json]
+indent_size = 4
+
+[ProjectSettings/XR*.asset]
+indent_size = 4

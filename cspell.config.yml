@@ -1,0 +1,33 @@
+allowCompoundWords: true
+dictionaries:
+  - cpp
+  - csharp
+  - dotnet
+  - en-gb
+  - en-us
+  - fsharp
+enableGlobDot: true
+features:
+  weighted-suggestions: true
+globRoot: ${cwd}
+id: kurone-kito
+language: en,ja
+ignorePaths:
+  - .git
+  - .github/CODE_OF_CONDUCT.*
+  - .vscode/extensions.json
+  - Assets/UdonSharp
+  - Assets/XR
+  - cspell.config.yml
+  - Packages/com.*
+  - Packages/dev.*
+  - Packages/*.json
+  - ProjectSettings
+words:
+  - kito
+  - kuroné
+  - udon
+  - vrcsdk
+  - vrchat
+useGitignore: true
+version: '0.2'

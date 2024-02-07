@@ -1,0 +1,64 @@
+{
+  "files.associations": {
+    "*.asmdef": "json",
+    "*.asset": "yaml",
+    "*.meta": "yaml",
+    "*.uss": "css",
+    "LICENSE": "plaintext"
+  },
+  "files.readonlyInclude": {
+    "Packages/com.*/**": true,
+    "Packages/dev.*/**": true,
+    "Packages/*.json": true,
+    "ProjectSettings/**": true
+  },
+  "files.watcherExclude": {
+    "**/*.suo": true,
+    "Build/": true,
+    "Library/**": true,
+    "Logs/**": true,
+    "Obj/": true,
+    "Temp/": true,
+    "UserSettings/**": true
+  },
+  "git.branchProtection": ["main"],
+  "search.exclude": {
+    "**/*.suo": true,
+    "Build/": true,
+    "Library/**": true,
+    "Logs/**": true,
+    "Obj/": true,
+    "Temp/": true,
+    "UserSettings/**": true
+  },
+  "yaml.customTags": [
+    "tag:unity3d.com,2011:1 mapping",
+    "tag:unity3d.com,2011:5 mapping",
+    "tag:unity3d.com,2011:11 mapping",
+    "tag:unity3d.com,2011:13 mapping",
+    "tag:unity3d.com,2011:19 mapping",
+    "tag:unity3d.com,2011:30 mapping",
+    "tag:unity3d.com,2011:47 mapping",
+    "tag:unity3d.com,2011:55 mapping",
+    "tag:unity3d.com,2011:78 mapping",
+    "tag:unity3d.com,2011:114 mapping",
+    "tag:unity3d.com,2011:126 mapping",
+    "tag:unity3d.com,2011:129 mapping",
+    "tag:unity3d.com,2011:159 mapping",
+    "tag:unity3d.com,2011:236 mapping",
+    "tag:unity3d.com,2011:310 mapping",
+    "tag:unity3d.com,2011:1045 mapping",
+    "tag:unity3d.com,2011:387306366 mapping",
+    "tag:unity3d.com,2011:890905787 mapping",
+    "tag:unity3d.com,2011:937362698 mapping",
+    "tag:unity3d.com,2011:1386491679 mapping"
+  ],
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/reviewpad/schemas/main/latest/schema.json": [
+      "reviewpad.yml"
+    ],
+    "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json": [
+      "cspell.config.yml"
+    ]
+  }
+}

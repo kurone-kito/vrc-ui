@@ -1,0 +1,17 @@
+/Assets/UdonSharp/** linguist-vendored
+/Packages/*.json linguist-vendored
+/Packages/com.*/** linguist-vendored
+/Packages/dev.*/** linguist-vendored
+/ProjectSettings/** linguist-vendored
+
+*.asset merge=unityyamlmerge filter=vrc eol=lf text
+*.mat merge=unityyamlmerge eol=lf text
+*.meta merge=unityyamlmerge eol=lf text
+*.prefab merge=unityyamlmerge filter=vrc eol=lf text
+*.unity merge=unityyamlmerge filter=vrc eol=lf text
+
+.gitattributes export-ignore
+.github export-ignore
+.gitignore export-ignore
+.gitkeep export-ignore
+reviewpad.yml export-ignore
