@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-18.4 -20 128 128">
+  <defs>
+    <style>
+      .b {
+        stroke-width: 6px;
+      }
+
+      .b, .c {
+        fill: none;
+        stroke: white;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+
+      .c {
+        stroke-width: 8px;
+      }
+
+      .d {
+        fill: white;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect class="d" x="10" width="22" height="36" rx="10" ry="10"/>
+    <path class="c" d="m4,30s3,12.3,17,12.2,16.2-12.2,16.2-12.2"/>
+    <line class="b" x1="21" y1="42" x2="21" y2="52"/>
+    <line class="c" x1="11" y1="52" x2="31" y2="52"/>
+  </g>
+  <g>
+    <rect class="d" x="60" y="32" width="22" height="36" rx="10" ry="10"/>
+    <path class="c" d="m54,62s3,12.3,17,12.2,16.2-12.2,16.2-12.2"/>
+    <line class="b" x1="71" y1="74" x2="71" y2="84"/>
+    <line class="c" x1="61" y1="84" x2="81" y2="84"/>
+  </g>
+  <g>
+    <polyline class="c" points="15 70 20.6 66.1 26.7 70"/>
+    <path class="c" d="m50.6,84h-23.9c-2.7,0-5.7-2-5.7-4s-.4-13.9-.4-13.9"/>
+  </g>
+  <g>
+    <polyline class="c" points="76.6 18 71 21.9 64.9 18"/>
+    <path class="c" d="m41,4h23.9c2.7,0,5.7,2,5.7,4s.4,13.9.4,13.9"/>
+  </g>
+</svg>
