@@ -8,6 +8,7 @@ Unity uGUI theme for VRChat.
 - Buttons
 - Panels
 - Scrollbars
+- Sliders
 
 ## ▶ Getting Started
 
