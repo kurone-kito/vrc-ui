@@ -2,6 +2,10 @@
 
 Unity uGUI theme for VRChat.
 
+## 💡 Features
+
+- Panels
+
 ## ▶ Getting Started
 
 ### 1. Import the registry via the VRChat Creator Companion (VCC)
