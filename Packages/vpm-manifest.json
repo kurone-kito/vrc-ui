@@ -8,6 +8,9 @@
     },
     "dev.onevr.vrworldtoolkit": {
       "version": "2.1.5"
+    },
+    "black.kit.toybox": {
+      "version": "0.0.0"
     }
   },
   "locked": {
@@ -29,6 +32,12 @@
       "version": "2.1.5",
       "dependencies": {
         "com.vrchat.base": "^3.2.x"
+      }
+    },
+    "black.kit.toybox": {
+      "version": "0.0.0",
+      "dependencies": {
+        "com.vrchat.worlds": "3.5.0"
       }
     }
   }
