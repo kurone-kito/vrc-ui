@@ -8,6 +8,6 @@ Language: [🇬🇧](./CONTRIBUTING.md) | [🇯🇵](./CONTRIBUTING.ja.md) | **�
 
 请注意我们有[行为准则](./CODE_OF_CONDUCT.ja.md)，请在与项目的所有互动中遵循。
 
-如果您的想法可以通过小修复显示，请直接使用[拉取请求](https://github.com/kurone-kito/vpm-project-template/pulls)。
+如果您的想法可以通过小修复显示，请直接使用[拉取请求](https://github.com/kurone-kito/vrc-ui/pulls)。
 
 在此存储库中，建议使用[英语或日语](https://translate.google.com/)进行讨论。
