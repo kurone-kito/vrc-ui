@@ -49,7 +49,7 @@ Language: [🇬🇧](./CODE_OF_CONDUCT.md) | **🇯🇵** | [🇨🇳](./CODE_OF
 
 ## 執行
 
-虐待的、嫌がらせ、またはその他の許容できない行動の事例は、執行を担当するコミュニティリーダーに対して [Issues](https://github.com/kurone-kito/vpm-project-template/issues) で報告される場合があります。
+虐待的、嫌がらせ、またはその他の許容できない行動の事例は、執行を担当するコミュニティリーダーに対して [Issues](https://github.com/kurone-kito/vrc-ui/issues) で報告される場合があります。
 すべての苦情は迅速かつ公正にレビューおよび調査されます。
 
 すべてのコミュニティリーダーは、問題の報告者のプライバシーとセキュリティを尊重する義務があります。
