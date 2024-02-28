@@ -6,9 +6,14 @@
         "VRC.SDK3.Editor",
         "VRC.SDKBase",
         "VRC.SDKBase.Editor",
+        "UdonSharp.Runtime",
+        "black.kit.toybox",
+        "black.kit.toybox.Editor",
         "black.kit.vrcui"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
