@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-34.75 -35 256 256">
+  <defs>
+    <style>
+      .b, .c {
+        stroke: white;
+        stroke-miterlimit: 10;
+      }
+
+      .b, .d {
+        fill: white;
+      }
+
+      .c {
+        fill: none;
+        stroke-width: 16px;
+      }
+
+      .d {
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <circle class="d" cx="96" cy="36.5" r="36.5"/>
+  <circle class="d" cx="36.5" cy="149" r="36.5"/>
+  <circle class="b" cx="149.5" cy="149" r="36.5"/>
+  <line class="c" x1="150" y1="149.5" x2="115" y2="76.5"/>
+  <line class="c" x1="96" y1="36.5" x2="56" y2="110.5"/>
+  <line class="c" x1="37" y1="149.5" x2="106" y2="149.5"/>
+</svg>
