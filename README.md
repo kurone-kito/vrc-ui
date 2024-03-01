@@ -5,6 +5,7 @@ Unity uGUI theme for VRChat.
 ## 💡 Features
 
 - 42 Icons
+- Badges
 - Buttons
 - Panels
 - Scrollbars / Sliders
