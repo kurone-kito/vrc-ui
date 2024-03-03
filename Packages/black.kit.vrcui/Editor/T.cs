@@ -4,6 +4,7 @@ namespace black.kit.vrcui.Editor
     public static class T
     {
         public const string DETAIL_ICON_TOGGLE = nameof(DETAIL_ICON_TOGGLE);
+        public const string DETAIL_PROGRESS = nameof(DETAIL_PROGRESS);
         public const string DETAIL_TOGGLE_WITH_ANIMATION =
             nameof(DETAIL_TOGGLE_WITH_ANIMATION);
         public const string DETAIL_SELECT = nameof(DETAIL_SELECT);
