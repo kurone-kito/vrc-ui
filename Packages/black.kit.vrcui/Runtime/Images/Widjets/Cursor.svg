@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-48.5 -49.5 256 256">
+  <defs>
+    <style>
+      .d {
+        fill: #2aaac1;
+        filter: url(#b);
+        stroke: #001c21;
+        stroke-miterlimit: 10;
+        stroke-width: 14px;
+      }
+    </style>
+    <filter id="b" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="2"/>
+      <feGaussianBlur result="c" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="c" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path class="d" d="m21.5,22.5c9-10,114.3,25.9,113,44s-27.5,23.5-34,30-18,35.2-32.5,35.6S12,33,21.5,22.5Z"/>
+</svg>

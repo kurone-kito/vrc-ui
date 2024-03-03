@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -24 128 128">
+  <defs>
+    <style>
+      .b {
+        stroke-linecap: round;
+      }
+
+      .b, .c {
+        fill: none;
+        stroke: white;
+        stroke-miterlimit: 10;
+        stroke-width: 8px;
+      }
+    </style>
+  </defs>
+  <rect class="c" x="4" y="4" width="60" height="72" rx="4.3" ry="4.3"/>
+  <line class="b" x1="38" y1="14" x2="17" y2="35"/>
+  <line class="b" x1="41" y1="35" x2="17" y2="59"/>
+  <line class="b" x1="52" y1="52" x2="44" y2="60"/>
+</svg>

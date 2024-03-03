@@ -6,6 +6,7 @@ dictionaries:
   - en-gb
   - en-us
   - fsharp
+  - lorem-ipsum
 enableGlobDot: true
 features:
   weighted-suggestions: true
@@ -19,16 +20,23 @@ ignorePaths:
   - Assets/UdonSharp
   - Assets/XR
   - cspell.config.yml
+  - package.json
   - Packages/com.*
   - Packages/dev.*
   - Packages/*.json
   - ProjectSettings
 words:
+  - atrous
+  - denoiser
   - kito
   - kuroné
+  - mathf
+  - MSAA
+  - occludee
   - udon
   - vrchat
   - vrcsdk
   - vrcui
+  - wrld
 useGitignore: true
 version: '0.2'

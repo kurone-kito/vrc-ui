@@ -1,7 +1,7 @@
 {
   "name": "black.kit.vrcui",
   "displayName": "black.kit.vrcui",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "unity": "2022.3",
   "description": "Unity uGUI theme for VRChat.",
   "author": {
@@ -12,6 +12,8 @@
   "dependencies": {},
   "gitDependencies": {},
   "vpmDependencies": {
+    "black.kit.toybox": "0.1.0",
+    "com.mimylab.fukuroudon": "1.13.0",
     "com.vrchat.worlds": "3.5.0"
   }
 }
