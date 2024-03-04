@@ -1,6 +1,4 @@
-# 💬 uGUI Theme for VRChat
-
-Unity uGUI theme for VRChat.
+# ![black.kit.vrcui: Unofficial uGUI theme like the LaunchPad for VRChat worlds](https://kurone-kito.github.io/vrc-ui/banner.png)
 
 ## 💡 Features
 
