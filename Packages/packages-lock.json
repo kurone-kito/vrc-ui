@@ -10,7 +10,9 @@
       "version": "file:black.kit.vrcui",
       "depth": 0,
       "source": "embedded",
-      "dependencies": {}
+      "dependencies": {
+        "com.unity.vectorgraphics": "2.0.0-preview.24"
+      }
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
@@ -114,7 +116,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.textmeshpro": {
-      "version": "3.0.7",
+      "version": "3.0.8",
       "depth": 0,
       "source": "registry",
       "dependencies": {
