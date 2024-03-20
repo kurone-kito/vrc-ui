@@ -1,0 +1,14 @@
+chat:
+  auto_reply: true
+early_access: true
+language: en
+reviews:
+  auto_review:
+    enabled: true
+  path_filters:
+    - '!Assets'
+    - '!Packages/com.vrchat.core.*/**/*'
+    - '!ProjectSettings'
+  path_instructions:
+    - instructions: Some files look broken, but they contain templates from Scriban. Please review with this in mind.
+      path: Website/**/*
