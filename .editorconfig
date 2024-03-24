@@ -14,7 +14,7 @@ indent_size = 4
 [*.{asset,md,meta,prefab,unity}]
 trim_trailing_whitespace = false
 
-[*.cs]
+[Packages/black.kit.*/**/Runtime/**/*.cs]
 dotnet_diagnostic.IDE0066.severity = none
 
 [Assets/UdonSharp/**.txt]
