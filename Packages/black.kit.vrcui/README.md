@@ -2,7 +2,7 @@
 
 ## 💡 Features
 
-- 42 Icons
+- 45 Icons
 - Badges
 - Buttons
 - Panels
