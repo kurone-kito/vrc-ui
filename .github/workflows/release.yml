@@ -43,7 +43,7 @@ jobs:
           echo "version=${{ steps.version.outputs.value }}" >> $GITHUB_ENV
       - name: Zip the Package for release
         working-directory: "${{ env.packagePath }}"
-        run: zip -r "${{ github.workspace }}/${{ env.zipFile }}" .
+        run: zip -r -9 "${{ github.workspace }}/${{ env.zipFile }}" .
       - name: Build a list of .meta files for future use
         run: find "${{ env.packagePath }}/" -name \*.meta >> metaList
       - name: Make a UnityPackage version of the Package for release
@@ -51,6 +51,8 @@ jobs:
         with:
           package-path: ${{ env.unityPackage }}
           include-files: metaList
+      - name: Zip the UnityPackage for release
+        run: zip -r -9 "${{ env.unityPackage }}.zip" ${{ env.unityPackage }} LICENSE README.md
       - name: Make a release tag of the version from the package.json file
         id: tag_version
         uses: rickstaa/action-create-tag@v1
@@ -62,5 +64,6 @@ jobs:
           files: |
             ${{ env.zipFile }}
             ${{ env.unityPackage }}
+            ${{ env.unityPackage }}.zip
             ${{ env.packagePath }}/package.json
           tag_name: ${{ env.version }}
