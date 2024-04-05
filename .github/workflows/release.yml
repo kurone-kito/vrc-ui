@@ -28,6 +28,8 @@ jobs:
     steps:
       - name: Checkout Local Repository
         uses: actions/checkout@v4
+      - name: copy the README and LICENSE files to the Package folder
+        run: cp README.md LICENSE "${{ env.packagePath }}"
       - id: version
         name: Get the Package version based on the package.json file
         # cspell: disable-next-line
