@@ -34,7 +34,7 @@ namespace black.kit.vrcui.Editor
             var style = defaultStyle.Value;
             EditorGUILayout.LabelField(L10n.Tr(T.USAGE_COMPONENT), style);
             EditorGUILayout.Space();
-            DrawList(usage, new() { ordered = true });
+            DrawList(usage, new() { Ordered = true });
             DrawUdonEvent(T.USAGE_ON_VALUE_CHANGED);
             EditorGUILayout.EndVertical();
             base.OnInspectorGUI();
