@@ -28,12 +28,12 @@ jobs:
     steps:
       - name: Checkout Local Repository
         uses: actions/checkout@v4
-      - name: Get the Package version based on the package.json file
-        id: version
-        uses: zoexx/github-action-json-file-properties@b9f36ce6ee6fe2680cd3c32b2c62e22eade7e590
+      - id: version
+        name: Get the Package version based on the package.json file
+        # cspell: disable-next-line
+        uses: sergeysova/jq-action@v2
         with:
-            file_path: "${{ env.packagePath }}/package.json"
-            prop_path: "version"
+          cmd: jq -r ".version" "${{ env.packagePath }}/package.json"
       - name: Configure the Environment Variables needed for releasing the Package
         run: |
           echo "zipFile=${{ vars.PACKAGE_NAME }}-${{ steps.version.outputs.value }}".zip >> $GITHUB_ENV
