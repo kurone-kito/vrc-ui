@@ -70,3 +70,9 @@ jobs:
       - name: Deploy the uploaded VPM Listing Website to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Trigger the action of the curation repository
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          event-type: build-listing
+          repository: kurone-kito/vpm
+          token: ${{ secrets.REPO_TOKEN }}
