@@ -2,13 +2,13 @@
 
 ## 💡 Features
 
-- 42 Icons
 - Badges
 - Buttons
 - Panels
 - Scrollbars / Sliders
 - Toast
 - Toggles
+- ... and more!
 
 ## ▶ Getting Started
 
