@@ -1,16 +1,14 @@
-# 💬 uGUI Theme for VRChat
-
-Unity uGUI theme for VRChat.
+# ![black.kit.vrcui: Unofficial uGUI theme like the LaunchPad for VRChat worlds](https://kurone-kito.github.io/vrc-ui/banner.png)
 
 ## 💡 Features
 
-- 42 Icons
 - Badges
 - Buttons
 - Panels
 - Scrollbars / Sliders
 - Toast
 - Toggles
+- ... and more!
 
 ## ▶ Getting Started
 
@@ -29,4 +27,16 @@ Unity uGUI theme for VRChat.
 
 ## License
 
-This repository is licensed under the [CC-BY-NC 4.0](LICENSE).
+This project is a dual license with the following options:
+
+- [Creative Commons CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+  (DEFAULT)
+- [MIT License](https://opensource.org/licenses/MIT)
+
+The **DEFAULT LICENSE applied is Creative Commons CC BY-NC 4.0**.
+If you apply the MIT License, please follow one of the following conditions:
+
+1. This project depends on **LaunchPad Icons**.
+   You should REMOVE this dependency.
+2. If the above is not possible, at least implement the LaunchPad Icons so
+   that you DO NOT EXPOSE LaunchPad Icons on your product.
