@@ -4,11 +4,15 @@ namespace black.kit.vrcui.Editor
     public static class T
     {
         public const string DETAIL_ICON_TOGGLE = nameof(DETAIL_ICON_TOGGLE);
+        public const string DETAIL_SELECT = nameof(DETAIL_SELECT);
         public const string DETAIL_TOGGLE_WITH_ANIMATION =
             nameof(DETAIL_TOGGLE_WITH_ANIMATION);
         public const string USAGE_COMPONENT = nameof(USAGE_COMPONENT);
+        public const string USAGE_DECREMENT = nameof(USAGE_DECREMENT);
+        public const string USAGE_EVENT_BUTTON = nameof(USAGE_EVENT_BUTTON);
         public const string USAGE_EVENT_TOGGLE = nameof(USAGE_EVENT_TOGGLE);
         public const string USAGE_ICON_TOGGLE_1 = nameof(USAGE_ICON_TOGGLE_1);
+        public const string USAGE_INCREMENT = nameof(USAGE_INCREMENT);
         public const string USAGE_LINK_ANIMATOR = nameof(USAGE_LINK_ANIMATOR);
         public const string USAGE_LINK_TOGGLE = nameof(USAGE_LINK_TOGGLE);
         public const string USAGE_ON_VALUE_CHANGED =
