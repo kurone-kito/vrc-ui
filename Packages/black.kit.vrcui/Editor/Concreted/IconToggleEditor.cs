@@ -8,7 +8,7 @@ namespace black.kit.vrcui.Editor
     /// The inspector of the <see cref="IconToggleEditor"/>.
     /// </summary>
     [CustomEditor(typeof(IconToggle))]
-    public sealed class IconToggleEditor : SelectEditorBase<IconToggle>
+    public sealed class IconToggleEditor : EditorBase<IconToggle>
     {
         /// <summary>The usage of the target.</summary>
         private readonly string[] usage = new[]
