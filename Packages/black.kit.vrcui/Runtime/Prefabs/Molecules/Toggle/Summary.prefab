@@ -52,9 +52,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
   m_MinWidth: -1
-  m_MinHeight: 133
+  m_MinHeight: 20
   m_PreferredWidth: -1
-  m_PreferredHeight: -1
+  m_PreferredHeight: 20
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -113,10 +113,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 121.8
-  m_fontSizeBase: 133
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 133
   m_fontStyle: 1
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_verticalMapping: 0
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
+  m_IsTextObjectScaleStatic: 1
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
@@ -166,34 +166,34 @@ PrefabInstance:
     - target: {fileID: 1364306451355444145, guid: 9790aeeef81d64c41aa9ccadafafb357,
         type: 3}
       propertyPath: m_MinWidth
-      value: 133
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1364306451355444145, guid: 9790aeeef81d64c41aa9ccadafafb357,
         type: 3}
       propertyPath: m_MinHeight
-      value: -1
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364306451355444145, guid: 9790aeeef81d64c41aa9ccadafafb357,
+        type: 3}
+      propertyPath: m_FlexibleWidth
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1364306451355444145, guid: 9790aeeef81d64c41aa9ccadafafb357,
         type: 3}
       propertyPath: m_PreferredWidth
-      value: 133
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1364306451355444145, guid: 9790aeeef81d64c41aa9ccadafafb357,
         type: 3}
       propertyPath: m_PreferredHeight
-      value: -1
+      value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 4345650854114929049, guid: 9790aeeef81d64c41aa9ccadafafb357,
+    - target: {fileID: 4247869235250187434, guid: 9790aeeef81d64c41aa9ccadafafb357,
         type: 3}
       propertyPath: serializationData.Prefab
       value: 
-      objectReference: {fileID: 4345650854114929049, guid: 9790aeeef81d64c41aa9ccadafafb357,
+      objectReference: {fileID: 4247869235250187434, guid: 9790aeeef81d64c41aa9ccadafafb357,
         type: 3}
-    - target: {fileID: 6636771901152553630, guid: 9790aeeef81d64c41aa9ccadafafb357,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7112419352483267959, guid: 9790aeeef81d64c41aa9ccadafafb357,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -262,7 +262,7 @@ PrefabInstance:
     - target: {fileID: 7921983891453622573, guid: 9790aeeef81d64c41aa9ccadafafb357,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7921983891453622573, guid: 9790aeeef81d64c41aa9ccadafafb357,
         type: 3}
@@ -272,7 +272,7 @@ PrefabInstance:
     - target: {fileID: 7921983891453622573, guid: 9790aeeef81d64c41aa9ccadafafb357,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7921983891453622573, guid: 9790aeeef81d64c41aa9ccadafafb357,
         type: 3}
@@ -282,7 +282,7 @@ PrefabInstance:
     - target: {fileID: 7921983891453622573, guid: 9790aeeef81d64c41aa9ccadafafb357,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7921983891453622573, guid: 9790aeeef81d64c41aa9ccadafafb357,
         type: 3}
@@ -391,12 +391,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 12
-    m_Right: 12
+    m_Left: 0
+    m_Right: 0
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 3
-  m_Spacing: 60
+  m_Spacing: 0
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
@@ -423,10 +423,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 88
-  m_MinHeight: 88
-  m_PreferredWidth: 88
-  m_PreferredHeight: 88
+  m_MinWidth: 20
+  m_MinHeight: 20
+  m_PreferredWidth: 20
+  m_PreferredHeight: 20
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
