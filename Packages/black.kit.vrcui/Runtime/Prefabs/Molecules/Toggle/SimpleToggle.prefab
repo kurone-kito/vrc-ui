@@ -21,32 +21,32 @@ PrefabInstance:
     - target: {fileID: 431778390565731819, guid: 613b98bcd8da22443ac0718226ee1db0,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 431778390565731819, guid: 613b98bcd8da22443ac0718226ee1db0,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 431778390565731819, guid: 613b98bcd8da22443ac0718226ee1db0,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 431778390565731819, guid: 613b98bcd8da22443ac0718226ee1db0,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 431778390565731819, guid: 613b98bcd8da22443ac0718226ee1db0,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 431778390565731819, guid: 613b98bcd8da22443ac0718226ee1db0,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 431778390565731819, guid: 613b98bcd8da22443ac0718226ee1db0,
         type: 3}
@@ -61,7 +61,7 @@ PrefabInstance:
     - target: {fileID: 431778390565731819, guid: 613b98bcd8da22443ac0718226ee1db0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 431778390565731819, guid: 613b98bcd8da22443ac0718226ee1db0,
         type: 3}
@@ -142,7 +142,7 @@ PrefabInstance:
     - target: {fileID: 3418004026051568605, guid: 613b98bcd8da22443ac0718226ee1db0,
         type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
-      value: 10
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4367733292760484015, guid: 613b98bcd8da22443ac0718226ee1db0,
         type: 3}
@@ -210,6 +210,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: bcaae2ef921965b49b94ff1140e22676, type: 2}
+    - target: {fileID: 8360858964577937890, guid: 613b98bcd8da22443ac0718226ee1db0,
+        type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 64
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
