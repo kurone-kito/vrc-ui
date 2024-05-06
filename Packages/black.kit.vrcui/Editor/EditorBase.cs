@@ -22,19 +22,6 @@ namespace black.kit.vrcui.Editor
         {
         }
 
-        /// <summary>
-        /// Draw the Udon event of the inspector.
-        /// </summary>
-        /// <param name="argument">The argument of the Udon event.</param>
-        protected void DrawUdonEvent(string argument) =>
-            EditorUtils.DrawUdonEvent(argument, style: defaultStyle.Value);
-
-        /// <summary>Draw the list of the inspector.</summary>
-        /// <param name="list">The list to draw.</param>
-        /// <param name="selectable">The list is selectable.</param>
-        protected void DrawList(string[] list, ListOptions options = new ()) =>
-            EditorUtils.DrawList(list, style: defaultStyle.Value, options);
-
         /// <summary>Get the property of the array.</summary>
         /// <param name="name">The name of the property.</param>
         /// <param name="index">The index of the array.</param>

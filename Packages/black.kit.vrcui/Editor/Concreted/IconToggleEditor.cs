@@ -1,12 +1,11 @@
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using black.kit.toybox.Editor;
 
 namespace black.kit.vrcui.Editor
 {
-    /// <summary>
-    /// The inspector of the <see cref="IconToggleEditor"/>.
-    /// </summary>
+    /// <summary>The inspector of the <see cref="IconToggle"/>.</summary>
     [CustomEditor(typeof(IconToggle))]
     public sealed class IconToggleEditor : EditorBase<IconToggle>
     {
@@ -31,7 +30,7 @@ namespace black.kit.vrcui.Editor
             var style = defaultStyle.Value;
             EditorGUILayout.LabelField(L10n.Tr(T.USAGE_COMPONENT), style);
             EditorGUILayout.Space();
-            DrawList(usage);
+            DrawList(usage, new ListOptions());
             EditorGUILayout.EndVertical();
             base.OnInspectorGUI();
 
