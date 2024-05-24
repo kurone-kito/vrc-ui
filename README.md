@@ -14,7 +14,7 @@
 
 ### 1. Import the registry via the VRChat Creator Companion (VCC)
 
-**[Add to VCC](vcc://vpm/addRepo?url=https%3A%2F%2Fkurone-kito.github.io%2Fvpm%2Findex.json)**
+Visit the **[VPM Catalogue page](https://kurone-kito.github.io/vpm/)** and click on the **Add to VCC** button.
 
 ### 2. Import the package to your project
 
@@ -24,6 +24,19 @@
 ### 3. Use the package, enjoy :D
 
 (To be added)
+
+## Dependencies
+
+If you use the project via the VCC, import automatically the following
+dependencies:
+
+- [LaunchPad Icons (black.kit.launchpadicon)](https://github.com/kurone-kito/launchpad-icons)
+- [UdonSharp Toybox (black.kit.toybox)](https://github.com/kurone-kito/udonsharp-toybox)
+
+## Contributing
+
+Welcome to contribute to this repository! For more details,
+please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md).
 
 ## License
 
@@ -36,7 +49,8 @@ This project is a dual license with the following options:
 The **DEFAULT LICENSE applied is Creative Commons CC BY-NC 4.0**.
 If you apply the MIT License, please follow one of the following conditions:
 
-1. This project depends on **LaunchPad Icons**.
+1. This project depends on
+   **[LaunchPad Icons](https://github.com/kurone-kito/launchpad-icons)**.
    You should REMOVE this dependency.
 2. If the above is not possible, at least implement the LaunchPad Icons so
    that you DO NOT EXPOSE LaunchPad Icons on your product.
