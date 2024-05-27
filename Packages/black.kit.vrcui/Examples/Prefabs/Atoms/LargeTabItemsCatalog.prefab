@@ -403,12 +403,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LTabItem (0)
       objectReference: {fileID: 0}
-    - target: {fileID: 7986149880103757354, guid: 7894469b7c0154d4ba300d31e2579588,
-        type: 3}
-      propertyPath: serializationData.Prefab
-      value: 
-      objectReference: {fileID: 7986149880103757354, guid: 7894469b7c0154d4ba300d31e2579588,
-        type: 3}
     - target: {fileID: 8051565976892556792, guid: 7894469b7c0154d4ba300d31e2579588,
         type: 3}
       propertyPath: m_Pivot.x
@@ -762,12 +756,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 3286163911610860551, guid: 8749350fc497f0748973ed957410c0cc,
-        type: 3}
-    - target: {fileID: 7986149880103757354, guid: 7894469b7c0154d4ba300d31e2579588,
-        type: 3}
-      propertyPath: serializationData.Prefab
-      value: 
-      objectReference: {fileID: 7986149880103757354, guid: 7894469b7c0154d4ba300d31e2579588,
         type: 3}
     - target: {fileID: 8051565976892556792, guid: 7894469b7c0154d4ba300d31e2579588,
         type: 3}
@@ -1373,6 +1361,7 @@ MonoBehaviour:
   m_Script: {fileID: -1533785930, guid: 661092b4961be7145bfbe56e1e62337b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AllowFocusView: 1
 --- !u!114 &9051535714186980840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1637,17 +1626,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 3286163911610860551, guid: 80c5aac84a74f9d41b45dcbeff980475,
-        type: 3}
-    - target: {fileID: 6335380559671449049, guid: 7894469b7c0154d4ba300d31e2579588,
-        type: 3}
-      propertyPath: _syncMethod
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7986149880103757354, guid: 7894469b7c0154d4ba300d31e2579588,
-        type: 3}
-      propertyPath: serializationData.Prefab
-      value: 
-      objectReference: {fileID: 7986149880103757354, guid: 7894469b7c0154d4ba300d31e2579588,
         type: 3}
     - target: {fileID: 8051565976892556792, guid: 7894469b7c0154d4ba300d31e2579588,
         type: 3}
