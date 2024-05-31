@@ -1,4 +1,4 @@
-﻿using UdonSharp;
+using UdonSharp;
 using UnityEngine;
 using UnityEngine.UI;
 using black.kit.toybox;
@@ -7,7 +7,7 @@ namespace black.kit.vrcui
 {
     /// <summary>The toggle switch of the icon.</summary>
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
-    public sealed class IconToggle : SelectBase
+    public sealed class ImageToggle : SelectBase
     {
         /// <summary>The property name of the images.</summary>
         public const string NAME_IMAGES = nameof(images);
@@ -26,7 +26,7 @@ namespace black.kit.vrcui
 #pragma warning restore IDE0044
 
         /// <summary>Gets the class name of the subject.</summary>
-        public override string ClassName => nameof(IconToggle);
+        public override string ClassName => nameof(ImageToggle);
 
         /// <summary>The values of the UI.</summary>
         protected override object[] Values => sprites;
@@ -34,8 +34,10 @@ namespace black.kit.vrcui
         /// <summary>Update the view of the UI.</summary>
         protected override void UpdateView()
         {
-            images[0].sprite = sprites.At(PreviousIndex);
-            images[1].sprite = sprites.At(Index);
+            var prev = sprites.At(PreviousIndex);
+            var curr = sprites.At(Index);
+            images[0].sprite = Direction > 0 ? prev : curr;
+            images[1].sprite = Direction > 0 ? curr : prev;
         }
     }
 }

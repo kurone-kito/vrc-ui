@@ -5,19 +5,19 @@ using black.kit.toybox.Editor;
 
 namespace black.kit.vrcui.Editor
 {
-    /// <summary>The inspector of the <see cref="IconToggle"/>.</summary>
-    [CustomEditor(typeof(IconToggle))]
-    public sealed class IconToggleEditor : EditorBase<IconToggle>
+    /// <summary>The inspector of the <see cref="ImageToggle"/>.</summary>
+    [CustomEditor(typeof(ImageToggle))]
+    public sealed class ImageToggleEditor : EditorBase<ImageToggle>
     {
         /// <summary>The usage of the target.</summary>
         private readonly string[] usage = new[]
         {
-            T.USAGE_ICON_TOGGLE_0,
+            T.USAGE_REGIST_SPRITES,
             T.USAGE_ICON_TOGGLE_1,
         };
 
         /// <summary>Initialize the editor.</summary>
-        public IconToggleEditor() : base(L10n.Tr(T.DETAIL_ICON_TOGGLE))
+        public ImageToggleEditor() : base(L10n.Tr(T.DETAIL_ICON_TOGGLE))
         {
         }
 
@@ -30,18 +30,24 @@ namespace black.kit.vrcui.Editor
             var style = defaultStyle.Value;
             EditorGUILayout.LabelField(L10n.Tr(T.USAGE_COMPONENT), style);
             EditorGUILayout.Space();
-            DrawList(usage, new ListOptions());
+            DrawList(
+                usage,
+                new ListOptions(ordered: true, tr: (t) => L10n.Tr(t)));
             EditorGUILayout.EndVertical();
             base.OnInspectorGUI();
 
             serializedObject.Update();
-            var image = serializedObject
-                .FindProperty(IconToggle.NAME_IMAGES)
-                .GetArrayElementAtIndex(1)
-                .objectReferenceValue as Image;
-            if (image)
+            var images = serializedObject.FindProperty(
+                ImageToggle.NAME_IMAGES);
+            if (images.arraySize >= 2)
             {
-                image.sprite = GetSprite();
+                var image = images
+                    .GetArrayElementAtIndex(1)
+                    .objectReferenceValue as Image;
+                if (image)
+                {
+                    image.sprite = GetSprite();
+                }
             }
             serializedObject.ApplyModifiedProperties();
         }
@@ -51,7 +57,11 @@ namespace black.kit.vrcui.Editor
         private Sprite GetSprite()
         {
             var (sprites, index, _) = GetArrayProperty(
-                IconToggle.NAME_SPRITES, TypedTarget.Index);
+                ImageToggle.NAME_SPRITES, TypedTarget.Index);
+            if (index < 0)
+            {
+                return null; // 'sprites' is empty
+            }
             var element = sprites.GetArrayElementAtIndex(index);
             return element.objectReferenceValue as Sprite;
         }

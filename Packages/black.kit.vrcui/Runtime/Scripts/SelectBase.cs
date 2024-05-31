@@ -1,6 +1,6 @@
-using black.kit.toybox;
 using UdonSharp;
 using UnityEngine;
+using black.kit.toybox;
 
 namespace black.kit.vrcui
 {
@@ -18,18 +18,20 @@ namespace black.kit.vrcui
             get => index;
             set
             {
-                var length = Values.Length;
-                var next = value < 0 ? length + value % length : value;
+                var next = Values.AtIndex(value);
                 if (index == next)
                 {
                     return;
                 }
                 PreviousIndex = index;
-                index = next % length;
+                index = next;
                 Notify();
                 UpdateView();
             }
         }
+
+        /// <summary>The direction of the index.</summary>
+        protected sbyte Direction { get; private set; } = 1;
 
         /// <summary>The previous index of the sprite.</summary>
         protected int PreviousIndex { get; private set; }
@@ -42,11 +44,19 @@ namespace black.kit.vrcui
 
         /// <summary>Decrement the index of the texts.</summary>
         /// <returns>The decremented index.</returns>
-        public int Decrement() => Index--;
+        public int Decrement()
+        {
+            Direction = -1;
+            return --Index;
+        }
 
         /// <summary>Increment the index of the texts.</summary>
         /// <returns>The incremented index.</returns>
-        public int Increment() => Index++;
+        public int Increment()
+        {
+            Direction = 1;
+            return ++Index;
+        }
 
         /// <summary>Update the view of the UI.</summary>
         protected abstract void UpdateView();
