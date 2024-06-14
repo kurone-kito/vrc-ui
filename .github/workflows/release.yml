@@ -24,6 +24,9 @@ jobs:
       contents: write
     env:
       packagePath: Packages/${{ vars.PACKAGE_NAME }}
+      unityPackage:
+      version:
+      zipFile:
     if: needs.config.outputs.config_package == 'true'
     steps:
       - name: Checkout Local Repository
@@ -38,9 +41,9 @@ jobs:
           cmd: jq -r ".version" "${{ env.packagePath }}/package.json"
       - name: Configure the Environment Variables needed for releasing the Package
         run: |
-          echo "zipFile=${{ vars.PACKAGE_NAME }}-${{ steps.version.outputs.value }}".zip >> $GITHUB_ENV
           echo "unityPackage=${{ vars.PACKAGE_NAME }}-${{ steps.version.outputs.value }}.unitypackage" >> $GITHUB_ENV
           echo "version=${{ steps.version.outputs.value }}" >> $GITHUB_ENV
+          echo "zipFile=${{ vars.PACKAGE_NAME }}-${{ steps.version.outputs.value }}".zip >> $GITHUB_ENV
       - name: Zip the Package for release
         working-directory: "${{ env.packagePath }}"
         run: zip -r -9 "${{ github.workspace }}/${{ env.zipFile }}" .
