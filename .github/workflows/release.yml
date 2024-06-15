@@ -82,6 +82,7 @@ jobs:
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
       - name: Make a release tag of the version from the package.json file
         id: tag_version
+        # cspell: disable-next-line
         uses: rickstaa/action-create-tag@v1
         with:
           tag: "${{ env.version }}"
