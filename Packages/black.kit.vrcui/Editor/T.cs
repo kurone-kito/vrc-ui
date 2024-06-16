@@ -3,8 +3,10 @@ namespace black.kit.vrcui.Editor
     /// <summary>The uniques of the localization.</summary>
     public static class T
     {
+        public const string DETAIL_FPS = nameof(DETAIL_FPS);
         public const string DETAIL_HERO = nameof(DETAIL_HERO);
         public const string DETAIL_ICON_TOGGLE = nameof(DETAIL_ICON_TOGGLE);
+        public const string DETAIL_PROGRESS = nameof(DETAIL_PROGRESS);
         public const string DETAIL_SELECT = nameof(DETAIL_SELECT);
         public const string DETAIL_TOGGLE_WITH_ANIMATION =
             nameof(DETAIL_TOGGLE_WITH_ANIMATION);
