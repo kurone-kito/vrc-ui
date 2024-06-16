@@ -24,8 +24,20 @@ jobs:
       contents: write
     env:
       packagePath: Packages/${{ vars.PACKAGE_NAME }}
+      stableVersion:
+      unityPackage:
+      version:
+      zipFile:
     if: needs.config.outputs.config_package == 'true'
     steps:
+      - id: gpg
+        name: Import the GPG key
+        # cspell: disable-next-line
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+          trust_level: 5
       - name: Checkout Local Repository
         uses: actions/checkout@v4
       - name: copy the README and LICENSE files to the Package folder
@@ -36,11 +48,19 @@ jobs:
         uses: sergeysova/jq-action@v2
         with:
           cmd: jq -r ".version" "${{ env.packagePath }}/package.json"
+      - name: Detect whether the version is a stable release
+        id: stable-match
+        # cspell: disable-next-line
+        uses: kaisugi/action-regex-match@v1.0.1
+        with:
+          flags: gm
+          regex: ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$
+          text: ${{ steps.version.outputs.value }}
       - name: Configure the Environment Variables needed for releasing the Package
         run: |
-          echo "zipFile=${{ vars.PACKAGE_NAME }}-${{ steps.version.outputs.value }}".zip >> $GITHUB_ENV
           echo "unityPackage=${{ vars.PACKAGE_NAME }}-${{ steps.version.outputs.value }}.unitypackage" >> $GITHUB_ENV
           echo "version=${{ steps.version.outputs.value }}" >> $GITHUB_ENV
+          echo "zipFile=${{ vars.PACKAGE_NAME }}-${{ steps.version.outputs.value }}".zip >> $GITHUB_ENV
       - name: Zip the Package for release
         working-directory: "${{ env.packagePath }}"
         run: zip -r -9 "${{ github.workspace }}/${{ env.zipFile }}" .
@@ -53,17 +73,31 @@ jobs:
           include-files: metaList
       - name: Zip the UnityPackage for release
         run: zip -r -9 "${{ env.unityPackage }}.zip" ${{ env.unityPackage }} LICENSE README.md
+      - name: Sign the artifacts
+        run: |
+          echo "${GPG_PASSPHRASE}" | gpg --batch -ab "${{ env.zipFile }}"
+          echo "${GPG_PASSPHRASE}" | gpg --batch -ab "${{ env.unityPackage }}"
+          echo "${GPG_PASSPHRASE}" | gpg --batch -ab "${{ env.unityPackage }}.zip"
+        env:
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
       - name: Make a release tag of the version from the package.json file
         id: tag_version
+        # cspell: disable-next-line
         uses: rickstaa/action-create-tag@v1
         with:
           tag: "${{ env.version }}"
+          gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
       - name: Publish the Release to GitHub
         uses: softprops/action-gh-release@v2
         with:
           files: |
             ${{ env.zipFile }}
+            ${{ env.zipFile }}.asc
             ${{ env.unityPackage }}
+            ${{ env.unityPackage }}.asc
             ${{ env.unityPackage }}.zip
+            ${{ env.unityPackage }}.zip.asc
             ${{ env.packagePath }}/package.json
+          prerelease: ${{ env.stableVersion == '' }}
           tag_name: ${{ env.version }}
