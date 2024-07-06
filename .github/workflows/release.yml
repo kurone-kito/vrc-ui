@@ -58,6 +58,7 @@ jobs:
           text: ${{ steps.version.outputs.value }}
       - name: Configure the Environment Variables needed for releasing the Package
         run: |
+          echo "stableVersion=${{ steps.stable-match.outputs.match }}" >> $GITHUB_ENV
           echo "unityPackage=${{ vars.PACKAGE_NAME }}-${{ steps.version.outputs.value }}.unitypackage" >> $GITHUB_ENV
           echo "version=${{ steps.version.outputs.value }}" >> $GITHUB_ENV
           echo "zipFile=${{ vars.PACKAGE_NAME }}-${{ steps.version.outputs.value }}".zip >> $GITHUB_ENV
