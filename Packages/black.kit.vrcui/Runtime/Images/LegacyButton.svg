@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 239.7 72.3">
+  <defs>
+    <style>
+      .d {
+        stroke: #00fefe;
+      }
+
+      .d, .e {
+        fill: none;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .e {
+        stroke: #fe0000;
+      }
+
+      .f {
+        filter: url(#b);
+      }
+    </style>
+    <filter id="b" data-name="outer-glow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="c" stdDeviation="5"/>
+      <feFlood flood-color="#00fefe" flood-opacity="1"/>
+      <feComposite in2="c" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="f">
+    <polyline class="d" points="10 35.3 10 16.9 20 6.3 225 6.3"/>
+    <polyline class="d" points="227 13.3 227 59.8 216 71.3 20 71.3 9 60.3"/>
+    <polyline class="e" points="239 13 227 1.3 19 1 6 14 6 36.3"/>
+    <circle class="e" cx="7" cy="42.3" r="6"/>
+  </g>
+</svg>

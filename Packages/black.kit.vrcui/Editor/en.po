@@ -5,8 +5,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: en\n"
 
+msgid "DETAIL_HERO"
+msgstr "This component is the toggle switch helper for the hero section."
+
 msgid "DETAIL_ICON_TOGGLE"
 msgstr "This component switches the specified icon image in order each time the user presses it."
+
+msgid "DETAIL_SELECT"
+msgstr "This component switches the specified value in order each time the user presses it."
 
 msgid "DETAIL_TOGGLE_WITH_ANIMATION"
 msgstr "This component works with the Toggle component to perform animation when toggling on and off."
@@ -14,11 +20,23 @@ msgstr "This component works with the Toggle component to perform animation when
 msgid "USAGE_COMPONENT"
 msgstr "For this component to work correctly, please follow these steps:"
 
+msgid "USAGE_DECREMENT"
+msgstr "Argument: <b>Decrement</b>"
+
+msgid "USAGE_EVENT_BUTTON"
+msgstr "Set the following to <b>OnClick ()</b> of the Button component."
+
 msgid "USAGE_EVENT_TOGGLE"
 msgstr "Set the following to <b>OnValueChanged (Boolean)</b> of the Toggle component."
 
+msgid "USAGE_HERO_1"
+msgstr "DO NOT CHANGE the <b>image</b>"
+
 msgid "USAGE_ICON_TOGGLE_1"
 msgstr "DO NOT CHANGE the <b>images</b>"
+
+msgid "USAGE_INCREMENT"
+msgstr "Argument: <b>Increment</b>"
 
 msgid "USAGE_LINK_ANIMATOR"
 msgstr "Deploy this component on the same object as the Animator component or manually link it."
