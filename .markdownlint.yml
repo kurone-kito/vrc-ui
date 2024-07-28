@@ -1,0 +1,17 @@
+default: true
+# Allow limit breakthroughs in the code block and table row lengths. The
+# default is unconditional prohibition. It is exceptionally allowed in
+# these elements due to folding difficulties.
+line-length:
+  code_blocks: false
+  tables: false
+# Allows the use of duplicate headings. The default is unconditional
+# prohibition. Due to the `siblings_only` flag not working, it is necessary
+# to enable duplicate headings in the entire document.
+no-duplicate-heading: false
+# Allows embedding of the specified HTML tag. The default is unconditional
+# prohibition. Allow for some valuable features, such as folding.
+no-inline-html:
+  allowed_elements:
+    - details
+    - summary
