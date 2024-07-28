@@ -1,12 +1,14 @@
 # ![black.kit.vrcui: Unofficial uGUI theme like the LaunchPad for VRChat worlds](https://kurone-kito.github.io/vrc-ui/banner.png)
 
+Language: **🇬🇧** | [🇯🇵](https://github.com/kurone-kito/vrc-ui/blob/main/README.ja.md)
+
 ## 💡 Features
 
-- Badges
 - Buttons
-- Panels
+- Cards
+- Dropdowns
 - Scrollbars / Sliders
-- Toast
+- Slide shows
 - Toggles
 - ... and more!
 
@@ -14,12 +16,14 @@
 
 ### 1. Import the registry via the VRChat Creator Companion (VCC)
 
-Visit the **[VPM Catalogue page](https://kurone-kito.github.io/vpm/)** and click on the **Add to VCC** button.
+Visit the **[VPM Catalogue page](https://kurone-kito.github.io/vpm/)** and
+click on the **Add to VCC** button.
 
 ### 2. Import the package to your project
 
 1. Click on the "Manage Project" button in the VCC
-2. Find the "VRCUI" package and click on the "(+) Add package" button
+2. Find the "black.kit.vrcui" package and click on the "(+) Add package"
+   button
 
 ### 3. Use the package, enjoy :D
 
@@ -35,8 +39,8 @@ dependencies:
 
 ## Contributing
 
-Welcome to contribute to this repository! For more details,
-please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md).
+Welcome to contribute to this repository! For more details, please refer to
+[CONTRIBUTING.md](https://github.com/kurone-kito/vrc-ui/blob/main/.github/CONTRIBUTING.md).
 
 ## License
 
