@@ -5,11 +5,10 @@
     "*": "${capture}.meta, ${capture}.md5",
     "*.dll": "${capture}.pdb",
     "*.md": "${capture}.*.md",
+    "*.sln": "*.csproj",
     ".gitconfig": ".gitattributes, .gitignore",
     ".tool-versions": "global.json",
-    "*.sln": "*.csproj",
     "LICENSE": "LICENSE.*.txt",
-    "LICENSE*": "LICENSE${capture}.meta",
     "T.cs": "*.po"
   },
   "files.associations": {
