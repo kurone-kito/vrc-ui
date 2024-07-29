@@ -6,9 +6,6 @@
     "com.vrchat.core.vpm-resolver": {
       "version": "0.1.29"
     },
-    "black.kit.toybox": {
-      "version": "0.7.0"
-    },
     "com.vrchat.base": {
       "version": "3.6.1"
     },
@@ -16,7 +13,10 @@
       "version": "3.6.1"
     },
     "black.kit.launchpadicons": {
-      "version": "0.5.0"
+      "version": "0.6.0"
+    },
+    "black.kit.toybox": {
+      "version": "0.8.0"
     }
   },
   "locked": {
@@ -27,12 +27,6 @@
     "com.vrchat.core.vpm-resolver": {
       "version": "0.1.29",
       "dependencies": {}
-    },
-    "black.kit.toybox": {
-      "version": "0.7.0",
-      "dependencies": {
-        "com.vrchat.worlds": "^3.6.0"
-      }
     },
     "com.vrchat.base": {
       "version": "3.6.1",
@@ -45,8 +39,14 @@
       }
     },
     "black.kit.launchpadicons": {
-      "version": "0.5.0",
+      "version": "0.6.0",
       "dependencies": {}
+    },
+    "black.kit.toybox": {
+      "version": "0.8.0",
+      "dependencies": {
+        "com.vrchat.worlds": "^3.6.1"
+      }
     }
   }
 }
