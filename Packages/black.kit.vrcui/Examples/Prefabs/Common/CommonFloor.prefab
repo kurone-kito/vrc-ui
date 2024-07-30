@@ -64,7 +64,7 @@ Transform:
   m_GameObject: {fileID: 2083709199767625856}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 20, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -529,6 +529,7 @@ MonoBehaviour:
     SerializedTypeNames: []
   portraitCameraPositionOffset: {x: 0, y: 0, z: 0}
   portraitCameraRotationOffset: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+  NavigationAreas: []
 --- !u!114 &7906947851965477166
 MonoBehaviour:
   m_ObjectHideFlags: 0
