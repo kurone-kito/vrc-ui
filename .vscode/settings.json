@@ -5,11 +5,11 @@
     "*": "${capture}.meta, ${capture}.md5",
     "*.dll": "${capture}.pdb",
     "*.md": "${capture}.*.md",
-    ".gitconfig": ".gitattributes, .gitignore",
-    ".tool-versions": "global.json",
     "*.sln": "*.csproj",
+    ".gitconfig": ".gitattributes, .gitignore",
+    ".markdownlint.*": ".markdownlint-cli2.*",
+    ".tool-versions": "global.json",
     "LICENSE": "LICENSE.*.txt",
-    "LICENSE*": "LICENSE${capture}.meta",
     "T.cs": "*.po"
   },
   "files.associations": {
