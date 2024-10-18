@@ -1,0 +1,49 @@
+name: The CI workflow on push
+on:
+  push:
+    branches:
+      - '*'
+      - '!main'
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      listPublishDirectory: Website
+      packagePath: Packages/${{ vars.PACKAGE_NAME }}
+      pathToCi: ci
+      unityPackage: ${{ vars.PACKAGE_NAME }}-feature.unitypackage
+      zipFile: ${{ vars.PACKAGE_NAME }}-feature.zip
+    steps:
+      - name: Checkout Local Repository
+        uses: actions/checkout@v4
+      - name: Zip the Package for testing
+        run: zip -r "${{ github.workspace }}/${{ env.zipFile }}" .
+        working-directory: "${{ env.packagePath }}"
+      - name: Build a list of .meta files for future use
+        run: find "${{ env.packagePath }}/" -name '*.meta' -type f >> metaList
+      - name: Make a UnityPackage version of the Package for release
+        uses: pCYSl5EDgo/create-unitypackage@v1
+        with:
+          package-path: ${{ env.unityPackage }}
+          include-files: metaList
+      - name: Checkout Automation Repository without removing prior checkouts
+        uses: actions/checkout@v4
+        with:
+          repository: vrchat-community/package-list-action
+          path: ${{ env.pathToCi }}
+          clean: false
+      - name: Deploy the global.json file
+        run: cp "${{ github.workspace }}/global.json" "${{ env.pathToCi }}/"
+      - name: Load cached data from previous runs
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ env.pathToCi }}/.nuke/temp
+            ~/.nuget/packages
+          key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj') }}
+      - name: Build Package Version Listing with Nuke
+        run: '"${{ env.pathToCi }}/build.cmd" BuildRepoListing --root "${{ env.pathToCi }}" --list-publish-directory "$GITHUB_WORKSPACE/${{ env.listPublishDirectory }}" --current-package-name "${{ vars.PACKAGE_NAME }}"'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
