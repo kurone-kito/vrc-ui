@@ -70,7 +70,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ff12e62e495851b40b3b4309dfe21bea, type: 2}
+  m_Motion: {fileID: 7400000, guid: b16cb7436b342234b81e0f92d0d93906, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -96,7 +96,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6a8d469d6dc3fb94fb2b1c76aa8a7ad7, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7e858ec1e919a894aacb070ebc2884aa, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -108,7 +108,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SlideSwitchBody
+  m_Name: LabelSlideSwitchBody
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Toggle
@@ -116,7 +116,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -180,7 +180,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8f9badc368713b843b6f35f342b0a630, type: 2}
+  m_Motion: {fileID: 7400000, guid: ac61b8ffb3c0f4e49a756b868ec8095e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
