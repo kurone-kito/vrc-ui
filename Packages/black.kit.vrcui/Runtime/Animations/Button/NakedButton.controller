@@ -49,7 +49,7 @@ AnimatorStateTransition:
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
+  m_CanTransitionToSelf: 0
 --- !u!1102 &-8062080572720592815
 AnimatorState:
   serializedVersion: 6
@@ -100,7 +100,7 @@ AnimatorStateTransition:
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
+  m_CanTransitionToSelf: 0
 --- !u!74 &-6926061793594227808
 AnimationClip:
   m_ObjectHideFlags: 0
@@ -635,7 +635,7 @@ AnimatorStateTransition:
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
+  m_CanTransitionToSelf: 0
 --- !u!74 &-5540493530308042973
 AnimationClip:
   m_ObjectHideFlags: 0
@@ -1680,7 +1680,7 @@ AnimatorStateTransition:
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
+  m_CanTransitionToSelf: 0
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -1776,10 +1776,10 @@ AnimatorStateMachine:
     m_Position: {x: 230, y: 230, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8062080572720592815}
-    m_Position: {x: -100, y: 300, z: 0}
+    m_Position: {x: -80, y: 300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 666904114612927302}
-    m_Position: {x: 130, y: 300, z: 0}
+    m_Position: {x: 140, y: 300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7829145558185950972}
     m_Position: {x: -170, y: 230, z: 0}

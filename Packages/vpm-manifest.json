@@ -6,14 +6,14 @@
     "dev.onevr.vrworldtoolkit": {
       "version": "3.2.0"
     },
-    "com.vrchat.worlds": {
-      "version": "3.7.1"
-    },
     "black.kit.launchpadicons": {
       "version": "0.6.2"
     },
     "black.kit.toybox": {
       "version": "0.8.1"
+    },
+    "com.vrchat.worlds": {
+      "version": "3.7.2"
     }
   },
   "locked": {
@@ -25,16 +25,6 @@
       "version": "3.2.0",
       "dependencies": {}
     },
-    "com.vrchat.worlds": {
-      "version": "3.7.1",
-      "dependencies": {
-        "com.vrchat.base": "3.7.1"
-      }
-    },
-    "com.vrchat.base": {
-      "version": "3.7.1",
-      "dependencies": {}
-    },
     "black.kit.launchpadicons": {
       "version": "0.6.2",
       "dependencies": {}
@@ -44,6 +34,16 @@
       "dependencies": {
         "com.vrchat.worlds": "^3.7.1"
       }
+    },
+    "com.vrchat.worlds": {
+      "version": "3.7.2",
+      "dependencies": {
+        "com.vrchat.base": "3.7.2"
+      }
+    },
+    "com.vrchat.base": {
+      "version": "3.7.2",
+      "dependencies": {}
     }
   }
 }
