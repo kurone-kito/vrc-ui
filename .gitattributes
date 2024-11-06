@@ -11,8 +11,6 @@
 *.unity merge=unityyamlmerge filter=vrc eol=lf text=auto
 
 .coderabbit.yaml export-ignore
-.gitattributes export-ignore
-.github export-ignore
-.gitignore export-ignore
-.gitkeep export-ignore
+.git* export-ignore
+.github/** export-ignore
 .imgbotconfig export-ignore
