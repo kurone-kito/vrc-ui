@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 35630e38b4e5ffb40b44ec5348b4333f, type: 2}
   m_Color: {r: 0.19607843, g: 0.7411765, b: 0.8392157, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -557,7 +557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 35630e38b4e5ffb40b44ec5348b4333f, type: 2}
   m_Color: {r: 0.19607843, g: 0.7411765, b: 0.8392157, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -703,21 +703,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 78
-      objectReference: {fileID: 0}
-    - target: {fileID: 4834809581070794807, guid: cb2e75230c0ea6c4ba1cf3c1cfb5c976,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4834809581070794807, guid: cb2e75230c0ea6c4ba1cf3c1cfb5c976,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4834809581070794807, guid: cb2e75230c0ea6c4ba1cf3c1cfb5c976,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4834809581070794807, guid: cb2e75230c0ea6c4ba1cf3c1cfb5c976,
         type: 3}
@@ -868,7 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 35630e38b4e5ffb40b44ec5348b4333f, type: 2}
   m_Color: {r: 0, g: 0, b: 0, a: 0.9019608}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -886,7 +871,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 40
+  m_PixelsPerUnitMultiplier: 80
 --- !u!224 &6102216357701831345 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4834809581070794807, guid: cb2e75230c0ea6c4ba1cf3c1cfb5c976,
