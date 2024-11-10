@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &583195220577835114
 RectTransform:
   m_ObjectHideFlags: 0
@@ -275,7 +275,7 @@ PrefabInstance:
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
@@ -285,17 +285,17 @@ PrefabInstance:
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
@@ -335,12 +335,12 @@ PrefabInstance:
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 76.5
       objectReference: {fileID: 0}
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
@@ -392,10 +392,10 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: -1
   m_MinHeight: -1
-  m_PreferredWidth: -1
+  m_PreferredWidth: 51
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
-  m_FlexibleHeight: -1
+  m_FlexibleHeight: 1
   m_LayoutPriority: 1
 --- !u!1 &3227963520637184086 stripped
 GameObject:
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 35630e38b4e5ffb40b44ec5348b4333f, type: 2}
   m_Color: {r: 0.2627451, g: 0.7921569, b: 0.9490196, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -550,8 +550,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2455221668179289733, guid: c79112f2f64437a41b7ca3f1fd62223f,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455221668179289733, guid: c79112f2f64437a41b7ca3f1fd62223f,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -10
+      value: -11.5
       objectReference: {fileID: 0}
     - target: {fileID: 3946268373056720917, guid: c79112f2f64437a41b7ca3f1fd62223f,
         type: 3}
@@ -1056,7 +1061,7 @@ PrefabInstance:
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
@@ -1066,17 +1071,17 @@ PrefabInstance:
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
@@ -1116,12 +1121,12 @@ PrefabInstance:
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 25.5
       objectReference: {fileID: 0}
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
@@ -1173,10 +1178,10 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: -1
   m_MinHeight: -1
-  m_PreferredWidth: -1
+  m_PreferredWidth: 51
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
-  m_FlexibleHeight: -1
+  m_FlexibleHeight: 1
   m_LayoutPriority: 1
 --- !u!1 &7608166507756900156 stripped
 GameObject:
@@ -1196,7 +1201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 35630e38b4e5ffb40b44ec5348b4333f, type: 2}
   m_Color: {r: 0.2627451, g: 0.7921569, b: 0.9490196, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}

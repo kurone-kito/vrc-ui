@@ -174,7 +174,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 34
+  m_PixelsPerUnitMultiplier: 68
 --- !u!114 &9182338891862838365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,11 +484,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4056073686794121549, guid: 85dab5ceac4faa34d923f7741fcb516a,
-        type: 3}
-      propertyPath: m_PixelsPerUnitMultiplier
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 4729463423529400422, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -561,8 +556,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8681691857399270295, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8681691857399270295, guid: 85dab5ceac4faa34d923f7741fcb516a,
+        type: 3}
       propertyPath: m_Color.a
-      value: 0.011764706
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8681691857399270295, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}

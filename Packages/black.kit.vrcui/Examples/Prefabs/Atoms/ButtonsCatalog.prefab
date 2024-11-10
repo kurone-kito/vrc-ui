@@ -1773,11 +1773,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2826452377771092691, guid: 3d02913925ece404fae6ef9010ff711f,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3378187523004435357, guid: 3d02913925ece404fae6ef9010ff711f,
         type: 3}
       propertyPath: m_Name
@@ -2154,7 +2149,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: Button / PaginationButton / NakedButton / RoundedButton / CapsuleButton
-        / LWingButton / RWingButton
+        / HeadlessButton / WingButton
       objectReference: {fileID: 0}
     - target: {fileID: 7608008528059885240, guid: 454860813edfc074d98abe2fa04077ff,
         type: 3}
@@ -3010,11 +3005,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5346851710172298992, guid: 7f537588a26ad7a48b991e8d14ed7b95,
-        type: 3}
-      propertyPath: m_TargetGraphic
-      value: 
-      objectReference: {fileID: 8928262018405079546}
     - target: {fileID: 6281267332179570827, guid: 7f537588a26ad7a48b991e8d14ed7b95,
         type: 3}
       propertyPath: m_Name
@@ -3036,18 +3026,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 5530995872078327310}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8928262018405079546 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3973727865039812596, guid: 7f537588a26ad7a48b991e8d14ed7b95,
-    type: 3}
-  m_PrefabInstance: {fileID: 5530995872078327310}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &6081908518861709541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3450,21 +3428,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2826452377771092691, guid: 3d02913925ece404fae6ef9010ff711f,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3378187523004435357, guid: 3d02913925ece404fae6ef9010ff711f,
         type: 3}
       propertyPath: m_Name
       value: HeadlessButton
       objectReference: {fileID: 0}
-    - target: {fileID: 4537756198000043929, guid: 3d02913925ece404fae6ef9010ff711f,
-        type: 3}
-      propertyPath: m_TargetGraphic
-      value: 
-      objectReference: {fileID: 4642005659258549636}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

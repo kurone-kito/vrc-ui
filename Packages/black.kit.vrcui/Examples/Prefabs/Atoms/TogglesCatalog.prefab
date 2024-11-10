@@ -1019,6 +1019,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5790071245721433916}
     m_Modifications:
+    - target: {fileID: -9001008335688376785, guid: f7b39661c84ca844284486649ea2e0dc,
+        type: 3}
+      propertyPath: _syncMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 180944003821418607, guid: f7b39661c84ca844284486649ea2e0dc,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1415,12 +1420,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2183335462696723045, guid: 9c418a671a140af4e8939071ded03357,
+        type: 3}
+      propertyPath: m_fontColor.a
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2183335462696723045, guid: 9c418a671a140af4e8939071ded03357,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 2164253514
+      objectReference: {fileID: 0}
     - target: {fileID: 5899289866326131704, guid: 9c418a671a140af4e8939071ded03357,
         type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 5899289866326131704, guid: 9c418a671a140af4e8939071ded03357,
         type: 3}
+    - target: {fileID: 6211302345146786608, guid: 9c418a671a140af4e8939071ded03357,
+        type: 3}
+      propertyPath: m_fontColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211302345146786608, guid: 9c418a671a140af4e8939071ded03357,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767538601276675469, guid: 9c418a671a140af4e8939071ded03357,
+        type: 3}
+      propertyPath: _syncMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9062464163823365427, guid: 9c418a671a140af4e8939071ded03357,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1456,6 +1486,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1039850331910707659, guid: 500e3d641ddf35b479ed3c9ec748ea66,
         type: 3}
+    - target: {fileID: 2103266828881008861, guid: 500e3d641ddf35b479ed3c9ec748ea66,
+        type: 3}
+      propertyPath: _syncMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6417558648954841834, guid: 500e3d641ddf35b479ed3c9ec748ea66,
         type: 3}
       propertyPath: m_Name
@@ -1585,21 +1620,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6085838757996165359}
     m_Modifications:
-    - target: {fileID: 2818247219425480459, guid: 53a41b5a249c91f459a73c7718f408c2,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.15686275
-      objectReference: {fileID: 0}
-    - target: {fileID: 2818247219425480459, guid: 53a41b5a249c91f459a73c7718f408c2,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.14117648
-      objectReference: {fileID: 0}
-    - target: {fileID: 2818247219425480459, guid: 53a41b5a249c91f459a73c7718f408c2,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.07058824
-      objectReference: {fileID: 0}
     - target: {fileID: 3744742231174432532, guid: 53a41b5a249c91f459a73c7718f408c2,
         type: 3}
       propertyPath: m_Name
@@ -1705,6 +1725,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5689752045712846568, guid: 53a41b5a249c91f459a73c7718f408c2,
+        type: 3}
+      propertyPath: _syncMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6411313081633805910, guid: 53a41b5a249c91f459a73c7718f408c2,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1740,6 +1765,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3221165784028639534}
     m_Modifications:
+    - target: {fileID: 3349864527254475093, guid: 9790aeeef81d64c41aa9ccadafafb357,
+        type: 3}
+      propertyPath: _syncMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4247869235250187434, guid: 9790aeeef81d64c41aa9ccadafafb357,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -1907,6 +1937,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5790071245721433916}
     m_Modifications:
+    - target: {fileID: -9001008335688376785, guid: f7b39661c84ca844284486649ea2e0dc,
+        type: 3}
+      propertyPath: _syncMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 180944003821418607, guid: f7b39661c84ca844284486649ea2e0dc,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2187,6 +2222,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5689752045712846568, guid: 53a41b5a249c91f459a73c7718f408c2,
+        type: 3}
+      propertyPath: _syncMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6411313081633805910, guid: 53a41b5a249c91f459a73c7718f408c2,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2378,6 +2418,11 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4278190080
       objectReference: {fileID: 0}
+    - target: {fileID: 7767538601276675469, guid: 9c418a671a140af4e8939071ded03357,
+        type: 3}
+      propertyPath: _syncMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9062464163823365427, guid: 9c418a671a140af4e8939071ded03357,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2413,6 +2458,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1039850331910707659, guid: 500e3d641ddf35b479ed3c9ec748ea66,
         type: 3}
+    - target: {fileID: 2103266828881008861, guid: 500e3d641ddf35b479ed3c9ec748ea66,
+        type: 3}
+      propertyPath: _syncMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6417558648954841834, guid: 500e3d641ddf35b479ed3c9ec748ea66,
         type: 3}
       propertyPath: m_Name
@@ -2537,6 +2587,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3221165784028639534}
     m_Modifications:
+    - target: {fileID: 3349864527254475093, guid: 9790aeeef81d64c41aa9ccadafafb357,
+        type: 3}
+      propertyPath: _syncMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4247869235250187434, guid: 9790aeeef81d64c41aa9ccadafafb357,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -2684,6 +2739,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5790071245721433916}
     m_Modifications:
+    - target: {fileID: -9001008335688376785, guid: f7b39661c84ca844284486649ea2e0dc,
+        type: 3}
+      propertyPath: _syncMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 180944003821418607, guid: f7b39661c84ca844284486649ea2e0dc,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2955,6 +3015,11 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0.51
       objectReference: {fileID: 0}
+    - target: {fileID: 6238158185814637982, guid: 5b5376aaa343c114f8c646de6f2a1fdb,
+        type: 3}
+      propertyPath: _syncMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6447676645948516472, guid: 5b5376aaa343c114f8c646de6f2a1fdb,
         type: 3}
       propertyPath: m_Color.a
@@ -3009,6 +3074,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.x
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103266828881008861, guid: 500e3d641ddf35b479ed3c9ec748ea66,
+        type: 3}
+      propertyPath: _syncMethod
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6417558648954841834, guid: 500e3d641ddf35b479ed3c9ec748ea66,
         type: 3}
@@ -3297,7 +3367,7 @@ PrefabInstance:
     - target: {fileID: 5519050559526149591, guid: 218f771c4a1b2bd44b484c3331b203d5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5519050559526149591, guid: 218f771c4a1b2bd44b484c3331b203d5,
         type: 3}
@@ -3613,6 +3683,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5689752045712846568, guid: 53a41b5a249c91f459a73c7718f408c2,
+        type: 3}
+      propertyPath: _syncMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6411313081633805910, guid: 53a41b5a249c91f459a73c7718f408c2,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3648,6 +3723,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3221165784028639534}
     m_Modifications:
+    - target: {fileID: 3349864527254475093, guid: 9790aeeef81d64c41aa9ccadafafb357,
+        type: 3}
+      propertyPath: _syncMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4247869235250187434, guid: 9790aeeef81d64c41aa9ccadafafb357,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -3800,21 +3880,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8295731264262628688}
     m_Modifications:
-    - target: {fileID: 153602363883107438, guid: 9c418a671a140af4e8939071ded03357,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.15686275
-      objectReference: {fileID: 0}
-    - target: {fileID: 153602363883107438, guid: 9c418a671a140af4e8939071ded03357,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.14117648
-      objectReference: {fileID: 0}
-    - target: {fileID: 153602363883107438, guid: 9c418a671a140af4e8939071ded03357,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.07058824
-      objectReference: {fileID: 0}
     - target: {fileID: 1255499672603433800, guid: 9c418a671a140af4e8939071ded03357,
         type: 3}
       propertyPath: m_Interactable
@@ -3951,6 +4016,11 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7767538601276675469, guid: 9c418a671a140af4e8939071ded03357,
+        type: 3}
+      propertyPath: _syncMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9062464163823365427, guid: 9c418a671a140af4e8939071ded03357,
         type: 3}
       propertyPath: m_Pivot.x
@@ -4085,11 +4155,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toggle
       objectReference: {fileID: 0}
-    - target: {fileID: 1548862668595859252, guid: 613b98bcd8da22443ac0718226ee1db0,
-        type: 3}
-      propertyPath: m_TargetGraphic
-      value: 
-      objectReference: {fileID: 2013397859164423314}
     - target: {fileID: 1972485399375252163, guid: 613b98bcd8da22443ac0718226ee1db0,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -4100,18 +4165,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 613b98bcd8da22443ac0718226ee1db0, type: 3}
---- !u!114 &2013397859164423314 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8360858964577937890, guid: 613b98bcd8da22443ac0718226ee1db0,
-    type: 3}
-  m_PrefabInstance: {fileID: 8067840571953769840}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &7641278613116276891 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 431778390565731819, guid: 613b98bcd8da22443ac0718226ee1db0,
@@ -4232,6 +4285,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1764345690450618965, guid: 5b5376aaa343c114f8c646de6f2a1fdb,
         type: 3}
+    - target: {fileID: 6238158185814637982, guid: 5b5376aaa343c114f8c646de6f2a1fdb,
+        type: 3}
+      propertyPath: _syncMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7503818821462248799, guid: 5b5376aaa343c114f8c646de6f2a1fdb,
         type: 3}
       propertyPath: m_Name

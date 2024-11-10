@@ -6,7 +6,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 3050836574977159055}
+    m_TransformParent: {fileID: 6214557710501124045}
     m_Modifications:
     - target: {fileID: 2364880589620535189, guid: 46a51165b9e739548b6e41864f099dd0,
         type: 3}
@@ -106,7 +106,7 @@ PrefabInstance:
     - target: {fileID: 2871551581735630559, guid: 46a51165b9e739548b6e41864f099dd0,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -13.499451
       objectReference: {fileID: 0}
     - target: {fileID: 2871551581735630559, guid: 46a51165b9e739548b6e41864f099dd0,
         type: 3}
@@ -331,6 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: -1533785930, guid: 661092b4961be7145bfbe56e1e62337b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AllowFocusView: 1
 --- !u!1001 &5774995462184622517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -598,7 +599,7 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1556870398419633834}
-    - targetCorrespondingSourceObject: {fileID: 8823211883269568058, guid: b5bd6ab8226271c47a8b2c57ce13e914,
+    - targetCorrespondingSourceObject: {fileID: 439783250589929080, guid: b5bd6ab8226271c47a8b2c57ce13e914,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2711580512520318907}
@@ -611,6 +612,12 @@ PrefabInstance:
 --- !u!224 &3050836574977159055 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8823211883269568058, guid: b5bd6ab8226271c47a8b2c57ce13e914,
+    type: 3}
+  m_PrefabInstance: {fileID: 5774995462184622517}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &6214557710501124045 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 439783250589929080, guid: b5bd6ab8226271c47a8b2c57ce13e914,
     type: 3}
   m_PrefabInstance: {fileID: 5774995462184622517}
   m_PrefabAsset: {fileID: 0}

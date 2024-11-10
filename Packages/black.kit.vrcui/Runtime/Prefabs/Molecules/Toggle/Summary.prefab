@@ -194,11 +194,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4247869235250187434, guid: 9790aeeef81d64c41aa9ccadafafb357,
         type: 3}
-    - target: {fileID: 7106093183693488336, guid: 9790aeeef81d64c41aa9ccadafafb357,
-        type: 3}
-      propertyPath: m_TargetGraphic
-      value: 
-      objectReference: {fileID: 2358120117127962010}
     - target: {fileID: 7112419352483267959, guid: 9790aeeef81d64c41aa9ccadafafb357,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -371,18 +366,6 @@ PrefabInstance:
       insertIndex: 1
       addedObject: {fileID: 9018434967530066051}
   m_SourcePrefab: {fileID: 100100000, guid: 9790aeeef81d64c41aa9ccadafafb357, type: 3}
---- !u!114 &2358120117127962010 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7483277425952595307, guid: 9790aeeef81d64c41aa9ccadafafb357,
-    type: 3}
-  m_PrefabInstance: {fileID: 5143190948989616369}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3490893618757252533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &3067165250122054108 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7921983891453622573, guid: 9790aeeef81d64c41aa9ccadafafb357,
