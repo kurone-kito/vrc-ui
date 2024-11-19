@@ -6,14 +6,20 @@
     "dev.onevr.vrworldtoolkit": {
       "version": "3.2.0"
     },
-    "black.kit.launchpadicons": {
-      "version": "0.6.2"
+    "net.ureishi.qvpen": {
+      "version": "3.2.15"
+    },
+    "com.mimylab.penoptimizationutility": {
+      "version": "1.0.2"
     },
     "com.vrchat.worlds": {
-      "version": "3.7.3"
+      "version": "3.7.4"
     },
     "black.kit.toybox": {
-      "version": "0.9.0"
+      "version": "0.9.1"
+    },
+    "black.kit.launchpadicons": {
+      "version": "0.8.0"
     }
   },
   "locked": {
@@ -25,25 +31,38 @@
       "version": "3.2.0",
       "dependencies": {}
     },
-    "black.kit.launchpadicons": {
-      "version": "0.6.2",
-      "dependencies": {}
+    "net.ureishi.qvpen": {
+      "version": "3.2.15",
+      "dependencies": {
+        "com.vrchat.worlds": "^3.4.0"
+      }
+    },
+    "com.mimylab.penoptimizationutility": {
+      "version": "1.0.2",
+      "dependencies": {
+        "com.vrchat.worlds": "^3.4.2",
+        "net.ureishi.qvpen": "^3.2.6"
+      }
     },
     "com.vrchat.worlds": {
-      "version": "3.7.3",
+      "version": "3.7.4",
       "dependencies": {
-        "com.vrchat.base": "3.7.3"
+        "com.vrchat.base": "3.7.4"
       }
     },
     "com.vrchat.base": {
-      "version": "3.7.3",
+      "version": "3.7.4",
       "dependencies": {}
     },
     "black.kit.toybox": {
-      "version": "0.9.0",
+      "version": "0.9.1",
       "dependencies": {
-        "com.vrchat.worlds": "^3.7.2"
+        "com.vrchat.worlds": "^3.7.3"
       }
+    },
+    "black.kit.launchpadicons": {
+      "version": "0.8.0",
+      "dependencies": {}
     }
   }
 }
