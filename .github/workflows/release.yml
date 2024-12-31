@@ -5,12 +5,12 @@ on:
 
 jobs:
   config:
-    runs-on: ubuntu-latest
     outputs:
       config_package: ${{ steps.config_package.outputs.configPackage }}
+    runs-on: ubuntu-latest
     steps:
-      - name: Ensure that required repository variable has been created for the Package
-        id: config_package
+      - id: config_package
+        name: Ensure that required repository variable has been created for the Package
         run: |
           if [ "${{ vars.PACKAGE_NAME }}" != "" ]; then
             echo "configPackage=true" >> $GITHUB_OUTPUT;
@@ -18,10 +18,6 @@ jobs:
             echo "configPackage=false" >> $GITHUB_OUTPUT;
           fi
   build:
-    needs: config
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
     env:
       packagePath: Packages/${{ vars.PACKAGE_NAME }}
       stableVersion:
@@ -29,6 +25,10 @@ jobs:
       version:
       zipFile:
     if: needs.config.outputs.config_package == 'true'
+    needs: config
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
     steps:
       - id: gpg
         name: Import the GPG key
@@ -48,8 +48,8 @@ jobs:
         uses: sergeysova/jq-action@v2
         with:
           cmd: jq -r ".version" "${{ env.packagePath }}/package.json"
-      - name: Detect whether the version is a stable release
-        id: stable-match
+      - id: stable-match
+        name: Detect whether the version is a stable release
         # cspell: disable-next-line
         uses: kaisugi/action-regex-match@v1.0.1
         with:
@@ -63,32 +63,32 @@ jobs:
           echo "version=${{ steps.version.outputs.value }}" >> $GITHUB_ENV
           echo "zipFile=${{ vars.PACKAGE_NAME }}-${{ steps.version.outputs.value }}.zip" >> $GITHUB_ENV
       - name: Zip the Package for release
-        working-directory: "${{ env.packagePath }}"
         run: zip -r -9 "${{ github.workspace }}/${{ env.zipFile }}" .
+        working-directory: "${{ env.packagePath }}"
       - name: Build a list of .meta files for future use
         run: find "${{ env.packagePath }}/" -name '*.meta' -type f >> metaList
       - name: Make a UnityPackage version of the Package for release
         uses: pCYSl5EDgo/create-unitypackage@v1
         with:
-          package-path: ${{ env.unityPackage }}
           include-files: metaList
+          package-path: ${{ env.unityPackage }}
       - name: Zip the UnityPackage for release
         run: zip -r -9 "${{ env.unityPackage }}.zip" ${{ env.unityPackage }} LICENSE README.md
-      - name: Sign the artifacts
+      - env:
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        name: Sign the artifacts
         run: |
           echo "${GPG_PASSPHRASE}" | gpg --batch -ab "${{ env.zipFile }}"
           echo "${GPG_PASSPHRASE}" | gpg --batch -ab "${{ env.unityPackage }}"
           echo "${GPG_PASSPHRASE}" | gpg --batch -ab "${{ env.unityPackage }}.zip"
-        env:
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-      - name: Make a release tag of the version from the package.json file
-        id: tag_version
+      - id: tag_version
+        name: Make a release tag of the version from the package.json file
         # cspell: disable-next-line
         uses: rickstaa/action-create-tag@v1
         with:
-          tag: "${{ env.version }}"
           gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          tag: "${{ env.version }}"
       - name: Publish the Release to GitHub
         uses: softprops/action-gh-release@v2
         with:

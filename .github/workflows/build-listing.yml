@@ -5,12 +5,6 @@ env:
   pathToCi: ci
 
 on:
-  workflow_dispatch:
-  workflow_run:
-    workflows:
-      - Build Release
-    types:
-      - completed
   release:
     types:
       - created
@@ -19,24 +13,30 @@ on:
       - published
       - released
       - unpublished
+  workflow_dispatch:
+  workflow_run:
+    types:
+      - completed
+    workflows:
+      - Build Release
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
-  pages: write
   id-token: write
+  pages: write
 
 # Allow one concurrent deployment
 concurrency:
-  group: pages
   cancel-in-progress: true
+  group: pages
 
 jobs:
   build-listing:
-    name: build-listing
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    name: build-listing
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Local Repository
@@ -44,22 +44,22 @@ jobs:
       - name: Checkout Automation Repository without removing prior checkouts
         uses: actions/checkout@v4
         with:
-          repository: vrchat-community/package-list-action
-          path: ${{ env.pathToCi }}
           clean: false
+          path: ${{ env.pathToCi }}
+          repository: vrchat-community/package-list-action
       - name: Deploy the global.json file
         run: cp "${{ github.workspace }}/global.json" "${{ env.pathToCi }}/"
       - name: Load cached data from previous runs
         uses: actions/cache@v4
         with:
+          key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj') }}
           path: |
             ${{ env.pathToCi }}/.nuke/temp
             ~/.nuget/packages
-          key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj') }}
-      - name: Build Package Version Listing with Nuke
-        run: '"${{ env.pathToCi }}/build.cmd" BuildRepoListing --root "${{ env.pathToCi }}" --list-publish-directory "$GITHUB_WORKSPACE/${{ env.listPublishDirectory }}" --current-package-name "${{ vars.PACKAGE_NAME }}"'
-        env:
+      - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        name: Build Package Version Listing with Nuke
+        run: '"${{ env.pathToCi }}/build.cmd" BuildRepoListing --root "${{ env.pathToCi }}" --list-publish-directory "$GITHUB_WORKSPACE/${{ env.listPublishDirectory }}" --current-package-name "${{ vars.PACKAGE_NAME }}"'
       - name: Prepare for GitHub Pages deployment
         uses: actions/configure-pages@v5
         with:
@@ -69,8 +69,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ${{ env.listPublishDirectory }}
-      - name: Deploy the uploaded VPM Listing Website to GitHub Pages
-        id: deployment
+      - id: deployment
+        name: Deploy the uploaded VPM Listing Website to GitHub Pages
         uses: actions/deploy-pages@v4
       - name: Trigger the action of the curation repository
         uses: peter-evans/repository-dispatch@v3

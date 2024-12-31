@@ -8,13 +8,13 @@ permissions:
   contents: read
 jobs:
   build:
-    runs-on: ubuntu-latest
     env:
       listPublishDirectory: Website
       packagePath: Packages/${{ vars.PACKAGE_NAME }}
       pathToCi: ci
       unityPackage: ${{ vars.PACKAGE_NAME }}-feature.unitypackage
       zipFile: ${{ vars.PACKAGE_NAME }}-feature.zip
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Local Repository
         uses: actions/checkout@v4
@@ -26,24 +26,24 @@ jobs:
       - name: Make a UnityPackage version of the Package for release
         uses: pCYSl5EDgo/create-unitypackage@v1
         with:
-          package-path: ${{ env.unityPackage }}
           include-files: metaList
+          package-path: ${{ env.unityPackage }}
       - name: Checkout Automation Repository without removing prior checkouts
         uses: actions/checkout@v4
         with:
-          repository: vrchat-community/package-list-action
-          path: ${{ env.pathToCi }}
           clean: false
+          path: ${{ env.pathToCi }}
+          repository: vrchat-community/package-list-action
       - name: Deploy the global.json file
         run: cp "${{ github.workspace }}/global.json" "${{ env.pathToCi }}/"
       - name: Load cached data from previous runs
         uses: actions/cache@v4
         with:
+          key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj') }}
           path: |
             ${{ env.pathToCi }}/.nuke/temp
             ~/.nuget/packages
-          key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj') }}
-      - name: Build Package Version Listing with Nuke
-        run: '"${{ env.pathToCi }}/build.cmd" BuildRepoListing --root "${{ env.pathToCi }}" --list-publish-directory "$GITHUB_WORKSPACE/${{ env.listPublishDirectory }}" --current-package-name "${{ vars.PACKAGE_NAME }}"'
-        env:
+      - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        name: Build Package Version Listing with Nuke
+        run: '"${{ env.pathToCi }}/build.cmd" BuildRepoListing --root "${{ env.pathToCi }}" --list-publish-directory "$GITHUB_WORKSPACE/${{ env.listPublishDirectory }}" --current-package-name "${{ vars.PACKAGE_NAME }}"'
