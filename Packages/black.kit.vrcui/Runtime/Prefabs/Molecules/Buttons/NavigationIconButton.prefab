@@ -51,10 +51,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 22
-  m_MinHeight: 22
-  m_PreferredWidth: 22
-  m_PreferredHeight: 22
+  m_MinWidth: 18
+  m_MinHeight: 18
+  m_PreferredWidth: 18
+  m_PreferredHeight: 18
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -285,7 +285,7 @@ PrefabInstance:
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 36
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
@@ -349,6 +349,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8094914759462261203, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
+      propertyPath: m_fontSize
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094914759462261203, guid: 85dab5ceac4faa34d923f7741fcb516a,
+        type: 3}
       propertyPath: m_margin.w
       value: 0
       objectReference: {fileID: 0}
@@ -366,6 +371,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_margin.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094914759462261203, guid: 85dab5ceac4faa34d923f7741fcb516a,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 8094914759462261203, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
@@ -422,9 +432,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
   m_MinWidth: 64
-  m_MinHeight: 36
+  m_MinHeight: 32
   m_PreferredWidth: 103
-  m_PreferredHeight: 36
+  m_PreferredHeight: 32
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -448,9 +458,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
   m_MinWidth: -1
-  m_MinHeight: 22
+  m_MinHeight: 18
   m_PreferredWidth: -1
-  m_PreferredHeight: 22
+  m_PreferredHeight: 18
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
