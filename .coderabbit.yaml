@@ -13,6 +13,8 @@ reviews:
     - '!ProjectSettings/**/*'
   path_instructions:
     - instructions: This folder contains C# files, but these are UdonSharp and have different restrictions than standard C#. Please review with this in mind.
+      path: Assets/black.kit.*/Examples/**/*
+    - instructions: This folder contains C# files, but these are UdonSharp and have different restrictions than standard C#. Please review with this in mind.
       path: Assets/black.kit.*/Runtime/**/*
     - instructions: Some files look broken, but they contain templates from Scriban. Please review with this in mind.
       path: Website/**/*
