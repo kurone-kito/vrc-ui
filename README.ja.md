@@ -47,15 +47,11 @@ VCC を介してプロジェクトを使用する場合、
 
 このプロジェクトは以下のオプションでデュアルライセンスです:
 
-- [Creative Commons CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.ja)
-  (既定)
-- [MIT License](https://licenses.opensource.jp/MIT/MIT.html)
+- [MIT License](https://opensource.org/licenses/MIT) (既定)
+- [Creative Commons CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
-**既定ライセンスは Creative Commons CC BY-NC 4.0 です**。
-MIT ライセンスを適用する場合は、次の条件のいずれかを遵守してください:
+**既定ライセンスは MIT License です**。あなたのプロジェクトにおいて、
+任意の方法でオプトインすることで、CC BY 4.0 ライセンスを適用可能です。
 
-1. このプロジェクトは
-   **[LaunchPad Icons](https://github.com/kurone-kito/launchpad-icons)**
-   に依存しています。この依存関係を削除してください。
-2. 上記が困難な場合は、少なくとも
-   LaunchPad Icons をあなたのプロジェクト上で公開しないようにしてください。
+このライセンスは、このライブラリが CC BY-NC 4.0 ライセンスで配布されていた、
+2025 年 4 月以前の名残であり、互換性のために残しています。
