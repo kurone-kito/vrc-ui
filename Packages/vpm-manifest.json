@@ -3,29 +3,42 @@
     "com.vrchat.core.vpm-resolver": {
       "version": "0.1.29"
     },
+    "black.kit.launchpadicons": {
+      "version": "0.11.0"
+    },
+    "black.kit.toybox": {
+      "version": "0.10.0"
+    },
     "com.mimylab.penoptimizationutility": {
       "version": "1.0.2"
     },
-    "black.kit.toybox": {
-      "version": "0.9.3"
-    },
-    "net.ureishi.qvpen": {
-      "version": "3.3.6"
-    },
-    "black.kit.launchpadicons": {
-      "version": "0.9.0"
+    "com.vrchat.base": {
+      "version": "3.8.0"
     },
     "com.vrchat.worlds": {
-      "version": "3.7.6"
+      "version": "3.8.0"
     },
     "dev.onevr.vrworldtoolkit": {
       "version": "3.2.1"
+    },
+    "net.ureishi.qvpen": {
+      "version": "3.3.6"
     }
   },
   "locked": {
     "com.vrchat.core.vpm-resolver": {
       "version": "0.1.29",
       "dependencies": {}
+    },
+    "black.kit.launchpadicons": {
+      "version": "0.11.0",
+      "dependencies": {}
+    },
+    "black.kit.toybox": {
+      "version": "0.10.0",
+      "dependencies": {
+        "com.vrchat.worlds": "^3.7.6"
+      }
     },
     "com.mimylab.penoptimizationutility": {
       "version": "1.0.2",
@@ -34,35 +47,25 @@
         "net.ureishi.qvpen": "^3.2.6"
       }
     },
-    "black.kit.toybox": {
-      "version": "0.9.3",
+    "com.vrchat.base": {
+      "version": "3.8.0",
+      "dependencies": {}
+    },
+    "com.vrchat.worlds": {
+      "version": "3.8.0",
       "dependencies": {
-        "com.vrchat.worlds": "^3.7.5"
+        "com.vrchat.base": "3.8.0"
       }
+    },
+    "dev.onevr.vrworldtoolkit": {
+      "version": "3.2.1",
+      "dependencies": {}
     },
     "net.ureishi.qvpen": {
       "version": "3.3.6",
       "dependencies": {
         "com.vrchat.worlds": "^3.5.0"
       }
-    },
-    "black.kit.launchpadicons": {
-      "version": "0.9.0",
-      "dependencies": {}
-    },
-    "com.vrchat.worlds": {
-      "version": "3.7.6",
-      "dependencies": {
-        "com.vrchat.base": "3.7.6"
-      }
-    },
-    "com.vrchat.base": {
-      "version": "3.7.6",
-      "dependencies": {}
-    },
-    "dev.onevr.vrworldtoolkit": {
-      "version": "3.2.1",
-      "dependencies": {}
     }
   }
 }
