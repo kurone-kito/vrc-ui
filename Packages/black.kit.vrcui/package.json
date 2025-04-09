@@ -1,10 +1,10 @@
 {
   "name": "black.kit.vrcui",
   "displayName": "black.kit.vrcui",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "unity": "2022.3",
   "unityRelease": "22f1",
-  "description": "Unofficial uGUI theme like the LaunchPad for VRChat worlds. / 非公式のVRChat 風 uGUI スキン",
+  "description": "Unofficial uGUI theme like the VRChat for VRChat worlds. / 非公式の VRChat 風 uGUI スキン",
   "keywords": [
     "Launchpad",
     "skin",
@@ -13,8 +13,8 @@
     "UI",
     "VRChat"
   ],
-  "license": "CC-BY-NC-4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "license": "MIT",
+  "licenseUrl": "https://opensource.org/licenses/MIT",
   "changelogUrl": "https://github.com/kurone-kito/vrc-ui/releases",
   "author": {
     "name": "Kuroné Kito",
@@ -24,8 +24,8 @@
   "dependencies": {},
   "gitDependencies": {},
   "vpmDependencies": {
-    "black.kit.launchpadicons": "^0.9.0",
-    "black.kit.toybox": "^0.9.3",
-    "com.vrchat.worlds": "^3.7.6"
+    "black.kit.launchpadicons": "^0.11.0",
+    "black.kit.toybox": "^0.10.0",
+    "com.vrchat.worlds": "^3.8.0"
   }
 }
