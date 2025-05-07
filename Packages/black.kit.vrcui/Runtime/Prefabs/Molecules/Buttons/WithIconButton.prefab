@@ -158,7 +158,7 @@ PrefabInstance:
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
@@ -168,7 +168,7 @@ PrefabInstance:
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
@@ -178,7 +178,7 @@ PrefabInstance:
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 116
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3435349488251367910, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
@@ -247,6 +247,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8094914759462261203, guid: 85dab5ceac4faa34d923f7741fcb516a,
         type: 3}
+      propertyPath: m_overflowMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094914759462261203, guid: 85dab5ceac4faa34d923f7741fcb516a,
+        type: 3}
       propertyPath: m_HorizontalAlignment
       value: 1
       objectReference: {fileID: 0}
@@ -294,7 +299,7 @@ MonoBehaviour:
     m_Right: 4
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
+  m_ChildAlignment: 3
   m_Spacing: 2
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
@@ -330,9 +335,9 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: 34
   m_MinHeight: 18
-  m_PreferredWidth: 128
+  m_PreferredWidth: -1
   m_PreferredHeight: -1
-  m_FlexibleWidth: -1
+  m_FlexibleWidth: 1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
 --- !u!1 &6719365590015073259 stripped
@@ -354,10 +359,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 116
-  m_MinHeight: 18
-  m_PreferredWidth: 116
-  m_PreferredHeight: 20
-  m_FlexibleWidth: -1
+  m_MinWidth: 58
+  m_MinHeight: 20
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: 1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
