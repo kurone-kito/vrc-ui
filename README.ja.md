@@ -1,6 +1,17 @@
-# ![black.kit.vrcui: 非公式の LaunchPad 風 uGUI テーマ](https://kurone-kito.github.io/vrc-ui/banner.png)
+# ![black.kit.vrcui: 非公式の VRChat 風 uGUI テーマ](https://kurone-kito.github.io/vrc-ui/banner.png)
 
 Language: [🇬🇧](https://github.com/kurone-kito/vrc-ui/blob/main/README.md) | **🇯🇵**
+
+VRChatには「ワールド独自のUIを覚える」ストレスがつきものです。
+
+ワールドごとにバラバラな UI が原因で、迷子になるプレイヤーさんを助けたい……
+と、長らくの間考えていました。
+
+もしワールド内で VRChat 標準の UI と同じものを自在に操ることがができるなら、
+プレイヤーさんやクリエイターさんは「操作方法を覚える・覚えていただく」
+ことに悩むより「ワールドを楽しむ」ことに集中できるでしょう！
+
+この「VRCUI」はそんな製作者さんのために生まれた、VRChat アセットです。
 
 ## 💡 特徴
 
@@ -34,7 +45,7 @@ Language: [🇬🇧](https://github.com/kurone-kito/vrc-ui/blob/main/README.md) 
 VCC を介してプロジェクトを使用する場合、
 以下の依存関係が自動的にインポートされます:
 
-- [LaunchPad Icons (black.kit.launchpadicon)](https://github.com/kurone-kito/launchpad-icons)
+- [VRC Icons (black.kit.launchpadicon)](https://github.com/kurone-kito/launchpad-icons)
 - [UdonSharp Toybox (black.kit.toybox)](https://github.com/kurone-kito/udonsharp-toybox)
 
 ## 貢献

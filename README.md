@@ -1,6 +1,16 @@
-# ![black.kit.vrcui: Unofficial uGUI theme like the LaunchPad for VRChat worlds](https://kurone-kito.github.io/vrc-ui/banner.png)
+# ![black.kit.vrcui: Unofficial uGUI theme like the VRChat for VRChat worlds](https://kurone-kito.github.io/vrc-ui/banner.png)
 
 Language: **🇬🇧** | [🇯🇵](https://github.com/kurone-kito/vrc-ui/blob/main/README.ja.md)
+
+VRChat comes with the stress of “learning the world-specific UI”.
+
+We have always wanted to help players who get lost in the different UIs in
+different worlds. If we can freely use the same UI within a world as the
+standard VRChat one, it may help players and world creators concentrate on
+“enjoying the world” rather than “learning or remembering how to operate
+the world”.
+
+This “VRCUI” is a VRChat asset created for such creators.
 
 ## 💡 Features
 
@@ -34,7 +44,7 @@ click on the **Add to VCC** button.
 If you use the project via the VCC, import automatically the following
 dependencies:
 
-- [LaunchPad Icons (black.kit.launchpadicon)](https://github.com/kurone-kito/launchpad-icons)
+- [VRC Icons (black.kit.launchpadicon)](https://github.com/kurone-kito/launchpad-icons)
 - [UdonSharp Toybox (black.kit.toybox)](https://github.com/kurone-kito/udonsharp-toybox)
 
 ## Contributing
