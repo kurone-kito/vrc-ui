@@ -73,7 +73,7 @@ jobs:
           include-files: metaList
           package-path: ${{ env.unityPackage }}
       - name: Zip the UnityPackage for release
-        run: zip -r -9 "${{ env.unityPackage }}.zip" ${{ env.unityPackage }} LICENSE README.md
+        run: zip -r -9 "${{ env.unityPackage }}.zip" ${{ env.unityPackage }} LICENSE README.md README.ja.md
       - env:
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
         name: Sign the artifacts
