@@ -21,7 +21,7 @@ PrefabInstance:
     - target: {fileID: 2611647485795820976, guid: 3d02913925ece404fae6ef9010ff711f,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2611647485795820976, guid: 3d02913925ece404fae6ef9010ff711f,
         type: 3}
@@ -31,7 +31,7 @@ PrefabInstance:
     - target: {fileID: 2611647485795820976, guid: 3d02913925ece404fae6ef9010ff711f,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2611647485795820976, guid: 3d02913925ece404fae6ef9010ff711f,
         type: 3}
@@ -41,7 +41,7 @@ PrefabInstance:
     - target: {fileID: 2611647485795820976, guid: 3d02913925ece404fae6ef9010ff711f,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 116
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2611647485795820976, guid: 3d02913925ece404fae6ef9010ff711f,
         type: 3}
@@ -169,11 +169,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 116
+  m_MinWidth: 58
   m_MinHeight: 20
-  m_PreferredWidth: 116
+  m_PreferredWidth: -1
   m_PreferredHeight: 20
-  m_FlexibleWidth: -1
+  m_FlexibleWidth: 1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
 --- !u!1001 &2701080644761919662
