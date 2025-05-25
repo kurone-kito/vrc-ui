@@ -12,6 +12,13 @@ the world”.
 
 This “VRCUI” is a VRChat asset created for such creators.
 
+## 🛠 Requirements
+
+This package is built for **Unity 2022.3** and newer. We recommend using
+Unity **2022.3** or later with the
+[VRChat Creator Companion](https://docs.vrchat.com/docs/creator-companion)
+and VPM to install the package.
+
 ## 💡 Features
 
 - Buttons
@@ -36,6 +43,18 @@ click on the **Add to VCC** button.
    button
 
 ### 3. Use the package, enjoy :D
+
+1. Open the `Packages/black.kit.vrcui/Runtime/Prefabs` folder.
+2. Drag the desired prefab into your Canvas. Prefabs are organised under
+   *Atoms*, *Molecules* and *Organisms*.
+3. You can also attach the scripts from these prefabs to your own objects.
+
+#### Examples
+
+- **Fps** – Place `Organisms/Status/Fps.prefab` to display frame rate.
+  The `Fps` component updates the text every interval.
+- **Progress** – Use `Organisms/Status/Progress.prefab` and change its
+  `Value` property from UdonSharp to show progress.
 
 (To be added)
 
