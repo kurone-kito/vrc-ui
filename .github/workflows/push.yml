@@ -7,6 +7,17 @@ on:
 permissions:
   contents: read
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: latest
+      - name: Run cspell
+        run: npx -y cspell lint --no-progress --show-suggestions -u '**'
+      - name: Run markdownlint
+        run: npx -y markdownlint-cli2 '**/*.md'
   build:
     env:
       listPublishDirectory: Website

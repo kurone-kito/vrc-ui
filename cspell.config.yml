@@ -4,11 +4,16 @@ dictionaries:
   - csharp
   - dotnet
   - en-gb
+  - en_shared
   - en-us
   - fsharp
   - game-development
   - gaming-terms
+  - git
   - lorem-ipsum
+  - markdown
+  - misc
+  - php
   - softwareTerms
   - unity
 enableGlobDot: true
@@ -16,6 +21,7 @@ features:
   weighted-suggestions: true
 globRoot: ${cwd}
 ignorePaths:
+  - .*ignore
   - .git
   - .github/CODE_OF_CONDUCT.*
   - .vscode/extensions.json
@@ -23,25 +29,30 @@ ignorePaths:
   - Assets/UdonSharp
   - Assets/XR
   - cspell.config.yml
+  - Library
   - package.json
   - Packages/com.*
   - Packages/dev.*
   - Packages/*.json
   - ProjectSettings
+ignoreRegExpList:
+  - (avtr|wrld)_([0-9a-f]{8})-([0-9a-f]{4})-([0-9a-f]{4})-([0-9a-f]{4})-([0-9a-f]{12})
 language: en,ja
 useGitignore: true
-version: '0.2'
+version: "0.2"
 words:
   - atrous
   - denoiser
   - dwlt
+  - imgbotconfig
   - kito
   - kuroné
-  - MSAA
+  - msaa
+  - nunit
   - scriban
-  - udon
+  - spatialize
   - unityyamlmerge
   - vrchat
   - vrcsdk
   - vrcui
-  - wrld
+  - vstuc

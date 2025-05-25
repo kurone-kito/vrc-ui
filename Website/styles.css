@@ -131,9 +131,8 @@ h1 {
   border-radius: 6px;
   max-width: 90%;
   width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: block;
+  object-fit: cover;
   margin-bottom: 0.25rem;
 }
 

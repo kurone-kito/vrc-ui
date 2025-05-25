@@ -52,6 +52,28 @@ dependencies:
 Welcome to contribute to this repository! For more details, please refer to
 [CONTRIBUTING.md](https://github.com/kurone-kito/vrc-ui/blob/main/.github/CONTRIBUTING.md).
 
+## 🛠 Using `git vrc` Filter
+
+This project uses a custom git filter named `git vrc` to normalize Unity
+files such as `.asset`, `.prefab`, and `.unity`. The filter removes
+unstable data so diffs stay readable and merges remain smooth.
+
+### 1. Install the `git-vrc` package
+
+```sh
+cargo install --locked --git 'https://github.com/anatawa12/git-vrc.git'
+git vrc install --config --global
+```
+
+### 2. Make the `.gitconfig` file available for referencing from local `.git/config`
+
+```sh
+git config include.path '../.gitconfig'
+```
+
+The `.gitattributes` file in this repository already applies the filter to
+Unity YAML files.
+
 ## License
 
 Copyright (c) Kuroné Kito (黒音キト)

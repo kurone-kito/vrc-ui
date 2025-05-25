@@ -20,10 +20,10 @@ jobs:
   build:
     env:
       packagePath: Packages/${{ vars.PACKAGE_NAME }}
-      stableVersion:
-      unityPackage:
-      version:
-      zipFile:
+      stableVersion: ''
+      unityPackage: ''
+      version: ''
+      zipFile: ''
     if: needs.config.outputs.config_package == 'true'
     needs: config
     permissions:
@@ -82,7 +82,7 @@ jobs:
           echo "${GPG_PASSPHRASE}" | gpg --batch -ab "${{ env.unityPackage }}"
           echo "${GPG_PASSPHRASE}" | gpg --batch -ab "${{ env.unityPackage }}.zip"
       - id: tag_version
-        name: Make a release tag of the version from the package.json file
+        name: Create a release tag of the version from the package.json file
         # cspell: disable-next-line
         uses: rickstaa/action-create-tag@v1
         with:
