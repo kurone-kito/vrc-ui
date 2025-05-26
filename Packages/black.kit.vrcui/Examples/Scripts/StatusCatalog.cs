@@ -27,6 +27,6 @@ namespace black.kit.vrcui.Examples
 
         /// <summary>Validate the inspector.</summary>
         /// <returns>Whether the inspectors are valid.</returns>
-        protected override bool ValidateInspector() => !!progress;
+        protected override bool ValidateInspector() => progress;
     }
 }
