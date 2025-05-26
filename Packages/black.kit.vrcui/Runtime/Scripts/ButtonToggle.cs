@@ -59,7 +59,7 @@ namespace black.kit.vrcui
                 SetTrigger(TRIGGER_SELECTED, TRIGGER_UNSELECTED);
                 SetTriggerToToggles(TRIGGER_SELECTED, TRIGGER_UNSELECTED);
             }
-            else if (!IsAnyOn())
+            else if (toggles.Length > 0 && !IsAnyOn())
             {
                 SetTrigger(TRIGGER_NEUTRAL);
                 SetTriggerToToggles(TRIGGER_NEUTRAL);
