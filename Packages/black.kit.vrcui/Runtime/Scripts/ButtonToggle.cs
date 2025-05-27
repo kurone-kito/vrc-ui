@@ -6,6 +6,7 @@ namespace black.kit.vrcui
 {
     /// <summary>The toggle switch look like a button.</summary>
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
+    [AddComponentMenu("black.kit.vrcui/ButtonToggle")]
     public sealed class ButtonToggle : UdonSharpBehaviour
     {
         /// <summary>The property name of the animators.</summary>

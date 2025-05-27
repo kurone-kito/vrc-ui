@@ -6,6 +6,7 @@ using black.kit.toybox;
 namespace black.kit.vrcui
 {
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
+    [AddComponentMenu("black.kit.vrcui/Fps")]
     public sealed class Fps : IntervalBase
     {
         /// <summary>The property name of the FPS.</summary>

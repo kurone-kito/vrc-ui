@@ -9,6 +9,7 @@ namespace black.kit.vrcui
     /// This component is the toggle switch helper for the hero section.
     /// </summary>
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
+    [AddComponentMenu("black.kit.vrcui/Hero")]
     public sealed class Hero : SelectBase
     {
         /// <summary>The property name of the image.</summary>

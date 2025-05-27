@@ -7,6 +7,7 @@ namespace black.kit.vrcui
 {
     /// <summary>The toggle switch of the text.</summary>
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
+    [AddComponentMenu("black.kit.vrcui/Select")]
     public sealed class Select : SelectBase
     {
         /// <summary>The property name of the values.</summary>

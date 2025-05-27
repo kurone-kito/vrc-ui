@@ -7,6 +7,7 @@ namespace black.kit.vrcui
 {
     /// <summary>The toggle switch of the icon.</summary>
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
+    [AddComponentMenu("black.kit.vrcui/ImageToggle")]
     public sealed class ImageToggle : SelectBase
     {
         /// <summary>The property name of the images.</summary>
