@@ -37,7 +37,7 @@ namespace black.kit.vrcui.Editor
             base.OnInspectorGUI();
 
             serializedObject.Update();
-            var image = AutoCompleteObject<Image>(Hero.NAME_IMAGE);
+            var image = EnsureComponentAssigned<Image>(Hero.NAME_IMAGE);
             if (image)
             {
                 image.sprite = GetSprite(

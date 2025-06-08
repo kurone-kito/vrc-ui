@@ -31,7 +31,7 @@ namespace black.kit.vrcui.Editor
             serializedObject.Update();
             var (values, index, size) =
                 GetArrayProperty(Select.NAME_VALUES, TypedTarget.Index);
-            var text = AutoCompleteObject<TextMeshProUGUI>(Select.NAME_TEXT);
+            var text = EnsureComponentAssigned<TextMeshProUGUI>(Select.NAME_TEXT);
             if (text && size > 0)
             {
                 text.text =
