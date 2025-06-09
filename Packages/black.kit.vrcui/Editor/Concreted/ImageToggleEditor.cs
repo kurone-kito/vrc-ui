@@ -46,24 +46,11 @@ namespace black.kit.vrcui.Editor
                     .objectReferenceValue as Image;
                 if (image)
                 {
-                    image.sprite = GetSprite();
+                    image.sprite = GetSprite(
+                        ImageToggle.NAME_SPRITES, TypedTarget.Index);
                 }
             }
             serializedObject.ApplyModifiedProperties();
-        }
-
-        /// <summary>Get the sprite of the icon.</summary>
-        /// <returns>The sprite of the icon.</returns>
-        private Sprite GetSprite()
-        {
-            var (sprites, index, _) = GetArrayProperty(
-                ImageToggle.NAME_SPRITES, TypedTarget.Index);
-            if (index < 0)
-            {
-                return null; // 'sprites' is empty
-            }
-            var element = sprites.GetArrayElementAtIndex(index);
-            return element.objectReferenceValue as Sprite;
         }
     }
 }

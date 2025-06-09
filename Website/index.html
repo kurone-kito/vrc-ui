@@ -3,6 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{~ if listingInfo.Name; ~}}
+    <meta property="og:title" content="{{ listingInfo.Name }}" />
+    {{~ end; ~}}
+    {{~ if listingInfo.Description; ~}}
+    <meta name="description" content="{{ listingInfo.Description }}" />
+    <meta property="og:description" content="{{ listingInfo.Description }}" />
+    {{~ end; ~}}
+    {{~ if listingInfo.BannerImage; ~}}
+    <meta property="og:image" content="{{ listingInfo.BannerImageUrl }}" />
+    {{~ end; ~}}
     <title>VCC Listing</title>
     <script
       type="module"
@@ -15,10 +25,11 @@
     <div class="col align-items-center content">
       <div id="listingInfo" class="col mb-4 w-100 align-items-center">
         {{~ if listingInfo.BannerImage; ~}}
-        <div
+        <img
           class="bannerImage"
-          style="background-image: url({{ listingInfo.BannerImageUrl }})"
-        ></div>
+          src="{{ listingInfo.BannerImageUrl }}"
+          alt="Banner for {{ listingInfo.Name }}"
+        />
         {{~ end; ~}}
         <h1>{{~ listingInfo.Name ~}}</h1>
         {{~ if listingInfo.Description; ~}}
@@ -40,7 +51,7 @@
           <div class="caption1" id="publishedByText">
             <a href="{{listingInfo.InfoLink.Url}}" target="_blank"
               >{{ if listingInfo.InfoLink.Text; listingInfo.InfoLink.Text; else;
-              "Lean More"; end; }}</a
+              "Learn More"; end; }}</a
             >
           </div>
           {{~ end; ~}}
@@ -373,7 +384,7 @@
       <div class="caption1" id="publishedByText">
         <a href="{{listingInfo.InfoLink.Url}}" target="_blank"
           >{{ if listingInfo.InfoLink.Text; listingInfo.InfoLink.Text; else;
-          "Lean More"; end; }}</a
+          "Learn More"; end; }}</a
         >
       </div>
       {{~ end; ~}}

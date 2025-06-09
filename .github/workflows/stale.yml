@@ -1,0 +1,23 @@
+name: Mark stale issues
+on:
+  schedule:
+    - cron: 0 0 * * *
+permissions:
+  issues: write
+  pull-requests: write
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-close: 7
+          days-before-stale: 60
+          close-issue-message: StaleBot closed the issue due to prolonged inactivity.
+          close-pr-message: StaleBot closed the pull request due to prolonged inactivity.
+          exempt-issue-labels: bug,enhancement
+          exempt-pr-labels: bug,enhancement
+          stale-issue-label: stale
+          stale-issue-message: StaleBot marked the issue as stale because there has been no activity.
+          stale-pr-label: stale
+          stale-pr-message: StaleBot marked the pull request as stale because there has been no activity.

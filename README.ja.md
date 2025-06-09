@@ -13,6 +13,12 @@ VRChatには「ワールド独自のUIを覚える」ストレスがつきもの
 
 この「VRCUI」はそんな製作者さんのために生まれた、VRChat アセットです。
 
+## 🛠 推奨環境
+
+このパッケージは **Unity 2022.3** 以降での利用を想定しています。
+[VRChat Creator Companion](https://docs.vrchat.com/docs/creator-companion)
+と VPM を利用してインストールすることを推奨します。
+
 ## 💡 特徴
 
 - ボタン
@@ -37,6 +43,19 @@ VRChatには「ワールド独自のUIを覚える」ストレスがつきもの
    "(+) Add package" ボタンをクリックします。
 
 ### 3. パッケージを使用し、楽しんでください :D
+
+1. `Packages/black.kit.vrcui/Runtime/Prefabs` フォルダーを開きます。
+2. 必要なプレハブを Canvas にドラッグ＆ドロップします。プレハブは
+   *Atoms*、*Molecules*、*Organisms* の階層に分類されています。
+3. これらのプレハブに付属するスクリプトは、独自のオブジェクトにも
+   アタッチできます。
+
+#### 利用例
+
+- **Fps** – `Organisms/Status/Fps.prefab` を配置すると FPS 表示が追加されます。
+  `Fps` コンポーネントが一定間隔でテキストを更新します。
+- **Progress** – `Organisms/Status/Progress.prefab` を利用し、UdonSharp から
+  `Value` プロパティを変更して進捗バーを更新できます。
 
 (今後ドキュメントを追加予定)
 

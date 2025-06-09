@@ -1,4 +1,4 @@
-﻿using UdonSharp;
+using UdonSharp;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,6 +6,7 @@ namespace black.kit.vrcui
 {
     /// <summary>The toggle switch look like a button.</summary>
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
+    [AddComponentMenu("black.kit.vrcui/ButtonToggle")]
     public sealed class ButtonToggle : UdonSharpBehaviour
     {
         /// <summary>The property name of the animators.</summary>
@@ -59,7 +60,7 @@ namespace black.kit.vrcui
                 SetTrigger(TRIGGER_SELECTED, TRIGGER_UNSELECTED);
                 SetTriggerToToggles(TRIGGER_SELECTED, TRIGGER_UNSELECTED);
             }
-            else if (!IsAnyOn())
+            else if (toggles.Length > 0 && !IsAnyOn())
             {
                 SetTrigger(TRIGGER_NEUTRAL);
                 SetTriggerToToggles(TRIGGER_NEUTRAL);

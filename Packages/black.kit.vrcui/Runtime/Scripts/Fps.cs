@@ -1,11 +1,13 @@
-﻿using TMPro;
+using TMPro;
 using UdonSharp;
 using UnityEngine;
+using VRC.SDK3.Network;
 using black.kit.toybox;
 
 namespace black.kit.vrcui
 {
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
+    [AddComponentMenu("black.kit.vrcui/Fps")]
     public sealed class Fps : IntervalBase
     {
         /// <summary>The property name of the FPS.</summary>
@@ -34,14 +36,19 @@ namespace black.kit.vrcui
         /// <summary>Update the view of the UI.</summary>
         public override void UpdateView()
         {
+            var pingMs = Mathf.RoundToInt(Stats.RoundTripTime);
             fps.text = $"FPS: {Mathf.RoundToInt(frames / Interval)}";
-            ping.text = usePing ? "Ping: 0" : string.Empty;
+            ping.text = usePing ? $"Ping: {pingMs}" : string.Empty;
             frames = 0;
         }
 
         /// <summary>Validate the inspector.</summary>
         /// <returns>Whether the inspectors are valid.</returns>
-        protected override bool ValidateInspector() => !!fps && !!ping;
+        /// <remarks>
+        /// <c>ping</c> is optional when <c>usePing</c> is disabled.
+        /// </remarks>
+        protected override bool ValidateInspector() =>
+            fps && (!usePing || ping);
 
 #pragma warning disable IDE0051
         /// <summary>Update the frames.</summary>

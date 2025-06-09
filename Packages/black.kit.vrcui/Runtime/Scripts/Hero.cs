@@ -9,6 +9,7 @@ namespace black.kit.vrcui
     /// This component is the toggle switch helper for the hero section.
     /// </summary>
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
+    [AddComponentMenu("black.kit.vrcui/Hero")]
     public sealed class Hero : SelectBase
     {
         /// <summary>The property name of the image.</summary>
@@ -24,6 +25,9 @@ namespace black.kit.vrcui
         /// <summary>The warning message of the page marks pane.</summary>
         private const string WARN_NO_PAGE_MARKS_PANE =
             "The page marks pane is not set.";
+
+        /// <summary>The warning message when inspectors are not set.</summary>
+        private const string WARN_NULL = "Some inspector values is null.";
 
 #pragma warning disable IDE0044
         /// <summary>The image's placeholder.</summary>
@@ -55,6 +59,10 @@ namespace black.kit.vrcui
         /// <summary>Update the view of the UI.</summary>
         protected override void UpdateView()
         {
+            if (!image || sprites.Length == 0)
+            {
+                return;
+            }
             image.sprite = sprites.At(Index);
             if (pageMarks != null)
             {
@@ -83,6 +91,11 @@ namespace black.kit.vrcui
         /// <summary>The callback when the object is initialized.</summary>
         private void Start()
         {
+            if (!image || sprites.Length == 0)
+            {
+                Log.Warn(WARN_NULL, Constants.APP_NAME);
+                return;
+            }
             if (!pageMark)
             {
                 Log.Warn(WARN_NO_PAGE_MARK, Constants.APP_NAME);

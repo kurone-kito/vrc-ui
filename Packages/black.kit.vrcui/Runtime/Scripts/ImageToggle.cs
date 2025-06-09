@@ -7,6 +7,7 @@ namespace black.kit.vrcui
 {
     /// <summary>The toggle switch of the icon.</summary>
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
+    [AddComponentMenu("black.kit.vrcui/ImageToggle")]
     public sealed class ImageToggle : SelectBase
     {
         /// <summary>The property name of the images.</summary>
@@ -14,6 +15,9 @@ namespace black.kit.vrcui
 
         /// <summary>The property name of the sprites.</summary>
         public const string NAME_SPRITES = nameof(sprites);
+
+        /// <summary>The warning of the null.</summary>
+        private const string WARN_NULL = "Some inspector values is null.";
 
 #pragma warning disable IDE0044
         /// <summary>List of the images of the UI.</summary>
@@ -34,6 +38,11 @@ namespace black.kit.vrcui
         /// <summary>Update the view of the UI.</summary>
         protected override void UpdateView()
         {
+            if (images.Length < 2 || sprites.Length == 0)
+            {
+                Log.Warn(WARN_NULL);
+                return;
+            }
             var prev = sprites.At(PreviousIndex);
             var curr = sprites.At(Index);
             images[0].sprite = Direction > 0 ? prev : curr;

@@ -37,26 +37,13 @@ namespace black.kit.vrcui.Editor
             base.OnInspectorGUI();
 
             serializedObject.Update();
-            var image = AutoCompleteObject<Image>(Hero.NAME_IMAGE);
+            var image = EnsureComponentAssigned<Image>(Hero.NAME_IMAGE);
             if (image)
             {
-                image.sprite = GetSprite();
+                image.sprite = GetSprite(
+                    Hero.NAME_SPRITES, TypedTarget.Index);
             }
             serializedObject.ApplyModifiedProperties();
        }
-
-        /// <summary>Get the sprite of the icon.</summary>
-        /// <returns>The sprite of the icon.</returns>
-        private Sprite GetSprite()
-        {
-            var (sprites, index, _) = GetArrayProperty(
-                Hero.NAME_SPRITES, TypedTarget.Index);
-            if (index < 0)
-            {
-                return null; // 'sprites' is empty
-            }
-            var element = sprites.GetArrayElementAtIndex(index);
-            return element.objectReferenceValue as Sprite;
-        }
     }
 }

@@ -1,5 +1,6 @@
 using UdonSharp;
 using UnityEditor;
+using UnityEngine;
 using black.kit.toybox.Editor;
 
 namespace black.kit.vrcui.Editor
@@ -35,6 +36,21 @@ namespace black.kit.vrcui.Editor
                 property,
                 s == 0 ? -1 : ((index < 0 ? s + index % s : index) % s),
                 s);
+        }
+
+        /// <summary>Get sprite from an array property.</summary>
+        /// <param name="propertyName">Name of the array property.</param>
+        /// <param name="index">Index of the array.</param>
+        /// <returns>The sprite at the specified index, or null if none.</returns>
+        protected Sprite GetSprite(string propertyName, int index)
+        {
+            var (property, i, _) = GetArrayProperty(propertyName, index);
+            if (i < 0)
+            {
+                return null; // property array is empty
+            }
+            var element = property.GetArrayElementAtIndex(i);
+            return element.objectReferenceValue as Sprite;
         }
     }
 }

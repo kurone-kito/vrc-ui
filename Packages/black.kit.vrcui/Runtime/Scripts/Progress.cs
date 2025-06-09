@@ -1,4 +1,4 @@
-﻿using TMPro;
+using TMPro;
 using UdonSharp;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +8,7 @@ namespace black.kit.vrcui
 {
     /// <summary>The progress widget</summary>
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
+    [AddComponentMenu("black.kit.vrcui/Progress")]
     public sealed class Progress : UdonSharpBehaviour
     {
         /// <summary>The warning of the null.</summary>

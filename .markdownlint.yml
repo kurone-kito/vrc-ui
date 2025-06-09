@@ -4,6 +4,7 @@ default: true
 # these elements due to folding difficulties.
 line-length:
   code_blocks: false
+  headings: false
   tables: false
 # Allows the use of duplicate headings. The default is unconditional
 # prohibition. Due to the `siblings_only` flag not working, it is necessary
