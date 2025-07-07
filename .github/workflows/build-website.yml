@@ -1,0 +1,56 @@
+name: Build the website
+
+on:
+  workflow_call:
+    inputs:
+      listPublishDirectory:
+        required: true
+        type: string
+      pathToCi:
+        required: true
+        type: string
+      zipFile:
+        required: false
+        type: string
+        default: ''
+      unityPackage:
+        required: false
+        type: string
+        default: ''
+permissions:
+  actions: write
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Local Repository
+        uses: actions/checkout@v4
+      - name: Checkout Automation Repository without removing prior checkouts
+        uses: actions/checkout@v4
+        with:
+          clean: false
+          path: ${{ inputs.pathToCi }}
+          repository: vrchat-community/package-list-action
+      - name: Deploy the global.json file
+        run: cp "${{ github.workspace }}/global.json" "${{ inputs.pathToCi }}/"
+      - name: Load cached data from previous runs
+        uses: actions/cache@v4
+        with:
+          key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj') }}
+          path: |
+            ${{ inputs.pathToCi }}/.nuke/temp
+            ~/.nuget/packages
+          restore-keys: |
+            ${{ runner.os }}-
+      - env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        name: Build Package Version Listing with Nuke
+        run: '"${{ inputs.pathToCi }}/build.cmd" BuildRepoListing --root "${{ inputs.pathToCi }}" --list-publish-directory "$GITHUB_WORKSPACE/${{ inputs.listPublishDirectory }}" --current-package-name "${{ vars.PACKAGE_NAME }}"'
+      - name: Upload listing artifact
+        uses: actions/upload-artifact@v4
+        with:
+          if-no-files-found: error
+          name: listing-site
+          path: ${{ inputs.listPublishDirectory }}
+          retention-days: 1

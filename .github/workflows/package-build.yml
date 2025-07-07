@@ -1,0 +1,47 @@
+name: Build Package Artifacts
+
+on:
+  workflow_call:
+    inputs:
+      packagePath:
+        required: true
+        type: string
+      unityPackage:
+        required: true
+        type: string
+      zipFile:
+        required: true
+        type: string
+permissions:
+  actions: write
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Local Repository
+        uses: actions/checkout@v4
+      - name: Zip the Package
+        run: zip -r -9 "${{ github.workspace }}/${{ inputs.zipFile }}" .
+        working-directory: "${{ inputs.packagePath }}"
+      - name: Build a list of .meta files for future use
+        run: find "${{ inputs.packagePath }}/" -name '*.meta' -type f >> metaList
+      - name: Make a UnityPackage version of the Package
+        uses: pCYSl5EDgo/create-unitypackage@v1.2.3
+        with:
+          include-files: metaList
+          package-path: ${{ inputs.unityPackage }}
+      - name: Upload package archive
+        uses: actions/upload-artifact@v4
+        with:
+          if-no-files-found: error
+          name: ${{ inputs.zipFile }}
+          path: ${{ inputs.zipFile }}
+          retention-days: 1
+      - name: Upload UnityPackage
+        uses: actions/upload-artifact@v4
+        with:
+          if-no-files-found: error
+          name: ${{ inputs.unityPackage }}
+          path: ${{ inputs.unityPackage }}
+          retention-days: 1
