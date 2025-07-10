@@ -1,60 +1,41 @@
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ startsWith(github.ref, 'refs/pull/') }}
 name: The CI workflow on push
 on:
   push:
     branches:
       - '*'
       - '!main'
-permissions:
-  contents: read
+  pull_request:
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: latest
-      - name: Run cspell
-        run: npx -y cspell lint --no-progress --show-suggestions -u '**'
-      - name: Run markdownlint
-        run: npx -y markdownlint-cli2 '**/*.md'
-  build:
-    env:
-      listPublishDirectory: Website
-      packagePath: Packages/${{ vars.PACKAGE_NAME }}
-      pathToCi: ci
-      unityPackage: ${{ vars.PACKAGE_NAME }}-feature.unitypackage
-      zipFile: ${{ vars.PACKAGE_NAME }}-feature.zip
-    runs-on: ubuntu-latest
-    steps:
       - name: Checkout Local Repository
         uses: actions/checkout@v4
-      - name: Zip the Package for testing
-        run: zip -r "${{ github.workspace }}/${{ env.zipFile }}" .
-        working-directory: "${{ env.packagePath }}"
-      - name: Build a list of .meta files for future use
-        run: find "${{ env.packagePath }}/" -name '*.meta' -type f >> metaList
-      - name: Make a UnityPackage version of the Package for release
-        uses: pCYSl5EDgo/create-unitypackage@v1
-        with:
-          include-files: metaList
-          package-path: ${{ env.unityPackage }}
-      - name: Checkout Automation Repository without removing prior checkouts
-        uses: actions/checkout@v4
-        with:
-          clean: false
-          path: ${{ env.pathToCi }}
-          repository: vrchat-community/package-list-action
-      - name: Deploy the global.json file
-        run: cp "${{ github.workspace }}/global.json" "${{ env.pathToCi }}/"
-      - name: Load cached data from previous runs
-        uses: actions/cache@v4
-        with:
-          key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj') }}
-          path: |
-            ${{ env.pathToCi }}/.nuke/temp
-            ~/.nuget/packages
-      - env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        name: Build Package Version Listing with Nuke
-        run: '"${{ env.pathToCi }}/build.cmd" BuildRepoListing --root "${{ env.pathToCi }}" --list-publish-directory "$GITHUB_WORKSPACE/${{ env.listPublishDirectory }}" --current-package-name "${{ vars.PACKAGE_NAME }}"'
+      - name: Run cspell
+        uses: streetsidesoftware/cspell-action@v7
+      - name: Run markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v20
+  package:
+    permissions:
+      actions: write
+      contents: read
+    secrets: inherit
+    uses: ./.github/workflows/package-build.yml
+    with:
+      packagePath: Packages/${{ vars.PACKAGE_NAME }}
+      unityPackage: ${{ vars.PACKAGE_NAME }}-feature.unitypackage
+      zipFile: ${{ vars.PACKAGE_NAME }}-feature.zip
+  website:
+    needs: package
+    permissions:
+      actions: write
+      contents: read
+    uses: ./.github/workflows/build-website.yml
+    with:
+      listPublishDirectory: Website
+      pathToCi: ci
+      zipFile: ${{ vars.PACKAGE_NAME }}-feature.zip
+      unityPackage: ${{ vars.PACKAGE_NAME }}-feature.unitypackage

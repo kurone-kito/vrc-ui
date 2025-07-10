@@ -1,8 +1,13 @@
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: true
 name: Build Release
 
 on:
   workflow_dispatch:
-
+permissions:
+  actions: write
+  contents: write
 jobs:
   config:
     outputs:
@@ -17,17 +22,61 @@ jobs:
           else
             echo "configPackage=false" >> $GITHUB_OUTPUT;
           fi
-  build:
+
+  prepare:
+    if: ${{ needs.config.outputs.config_package == 'true' }}
+    needs: config
+    outputs:
+      stableVersion: ${{ steps.resolve.outputs.stableVersion }}
+      unityPackage: ${{ steps.resolve.outputs.unityPackage }}
+      version: ${{ steps.resolve.outputs.version }}
+      zipFile: ${{ steps.resolve.outputs.zipFile }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Local Repository
+        uses: actions/checkout@v4
+      - id: version
+        name: Get the Package version based on the package.json file
+        # cspell: disable-next-line
+        uses: sergeysova/jq-action@v2
+        with:
+          cmd: jq -r ".version" "Packages/${{ vars.PACKAGE_NAME }}/package.json"
+      - id: stable-match
+        name: Detect whether the version is a stable release
+        # cspell: disable-next-line
+        uses: kaisugi/action-regex-match@v1.0.1
+        with:
+          flags: gm
+          regex: ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$
+          text: ${{ steps.version.outputs.value }}
+      - id: resolve
+        name: Resolve build environment values
+        run: |
+          echo "stableVersion=${{ steps.stable-match.outputs.match }}" >> $GITHUB_OUTPUT
+          echo "unityPackage=${{ vars.PACKAGE_NAME }}-${{ steps.version.outputs.value }}.unitypackage" >> $GITHUB_OUTPUT
+          echo "version=${{ steps.version.outputs.value }}" >> $GITHUB_OUTPUT
+          echo "zipFile=${{ vars.PACKAGE_NAME }}-${{ steps.version.outputs.value }}.zip" >> $GITHUB_OUTPUT
+
+  package:
+    if: ${{ needs.config.outputs.config_package == 'true' }}
+    needs:
+      - config
+      - prepare
+    secrets: inherit
+    uses: ./.github/workflows/package-build.yml
+    with:
+      packagePath: Packages/${{ vars.PACKAGE_NAME }}
+      unityPackage: ${{ needs.prepare.outputs.unityPackage }}
+      zipFile: ${{ needs.prepare.outputs.zipFile }}
+
+  release:
     env:
       packagePath: Packages/${{ vars.PACKAGE_NAME }}
-      stableVersion: ''
-      unityPackage: ''
-      version: ''
-      zipFile: ''
-    if: needs.config.outputs.config_package == 'true'
-    needs: config
-    permissions:
-      contents: write
+    if: ${{ needs.config.outputs.config_package == 'true' }}
+    needs:
+      - config
+      - prepare
+      - package
     runs-on: ubuntu-latest
     steps:
       - id: gpg
@@ -40,47 +89,23 @@ jobs:
           trust_level: 5
       - name: Checkout Local Repository
         uses: actions/checkout@v4
+      - name: Download package archive
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.prepare.outputs.zipFile }}
+      - name: Download UnityPackage
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.prepare.outputs.unityPackage }}
       - name: copy the README and LICENSE files to the Package folder
-        run: cp README.md README.*.md LICENSE LICENSE.*.txt "${{ env.packagePath }}"
-      - id: version
-        name: Get the Package version based on the package.json file
-        # cspell: disable-next-line
-        uses: sergeysova/jq-action@v2
-        with:
-          cmd: jq -r ".version" "${{ env.packagePath }}/package.json"
-      - id: stable-match
-        name: Detect whether the version is a stable release
-        # cspell: disable-next-line
-        uses: kaisugi/action-regex-match@v1.0.1
-        with:
-          flags: gm
-          regex: ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$
-          text: ${{ steps.version.outputs.value }}
-      - name: Configure the Environment Variables needed for releasing the Package
-        run: |
-          echo "stableVersion=${{ steps.stable-match.outputs.match }}" >> $GITHUB_ENV
-          echo "unityPackage=${{ vars.PACKAGE_NAME }}-${{ steps.version.outputs.value }}.unitypackage" >> $GITHUB_ENV
-          echo "version=${{ steps.version.outputs.value }}" >> $GITHUB_ENV
-          echo "zipFile=${{ vars.PACKAGE_NAME }}-${{ steps.version.outputs.value }}.zip" >> $GITHUB_ENV
-      - name: Zip the Package for release
-        run: zip -r -9 "${{ github.workspace }}/${{ env.zipFile }}" .
-        working-directory: "${{ env.packagePath }}"
-      - name: Build a list of .meta files for future use
-        run: find "${{ env.packagePath }}/" -name '*.meta' -type f >> metaList
-      - name: Make a UnityPackage version of the Package for release
-        uses: pCYSl5EDgo/create-unitypackage@v1
-        with:
-          include-files: metaList
-          package-path: ${{ env.unityPackage }}
+        run: cp README.md LICENSE "${{ env.packagePath }}"
       - name: Zip the UnityPackage for release
-        run: zip -r -9 "${{ env.unityPackage }}.zip" ${{ env.unityPackage }} LICENSE README.md README.ja.md
-      - env:
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-        name: Sign the artifacts
+        run: zip -r -9 "${{ needs.prepare.outputs.unityPackage }}.zip" "${{ needs.prepare.outputs.unityPackage }}" LICENSE README.md
+      - name: Sign the artifacts
         run: |
-          echo "${GPG_PASSPHRASE}" | gpg --batch -ab "${{ env.zipFile }}"
-          echo "${GPG_PASSPHRASE}" | gpg --batch -ab "${{ env.unityPackage }}"
-          echo "${GPG_PASSPHRASE}" | gpg --batch -ab "${{ env.unityPackage }}.zip"
+          gpg --batch --pinentry-mode loopback --passphrase "${{ secrets.GPG_PASSPHRASE }}" -ab "${{ needs.prepare.outputs.zipFile }}"
+          gpg --batch --pinentry-mode loopback --passphrase "${{ secrets.GPG_PASSPHRASE }}" -ab "${{ needs.prepare.outputs.unityPackage }}"
+          gpg --batch --pinentry-mode loopback --passphrase "${{ secrets.GPG_PASSPHRASE }}" -ab "${{ needs.prepare.outputs.unityPackage }}.zip"
       - id: tag_version
         name: Create a release tag of the version from the package.json file
         # cspell: disable-next-line
@@ -88,17 +113,16 @@ jobs:
         with:
           gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-          tag: "${{ env.version }}"
+          tag: "${{ needs.prepare.outputs.version }}"
       - name: Publish the Release to GitHub
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            ${{ env.zipFile }}
-            ${{ env.zipFile }}.asc
-            ${{ env.unityPackage }}
-            ${{ env.unityPackage }}.asc
-            ${{ env.unityPackage }}.zip
-            ${{ env.unityPackage }}.zip.asc
+            ${{ needs.prepare.outputs.zipFile }}
+            ${{ needs.prepare.outputs.zipFile }}.asc
+            ${{ needs.prepare.outputs.unityPackage }}.asc
+            ${{ needs.prepare.outputs.unityPackage }}.zip
+            ${{ needs.prepare.outputs.unityPackage }}.zip.asc
             ${{ env.packagePath }}/package.json
-          prerelease: ${{ env.stableVersion == '' }}
-          tag_name: ${{ env.version }}
+          prerelease: ${{ needs.prepare.outputs.stableVersion == '' }}
+          tag_name: ${{ needs.prepare.outputs.version }}
