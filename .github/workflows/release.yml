@@ -120,6 +120,7 @@ jobs:
           files: |
             ${{ needs.prepare.outputs.zipFile }}
             ${{ needs.prepare.outputs.zipFile }}.asc
+            ${{ needs.prepare.outputs.unityPackage }}
             ${{ needs.prepare.outputs.unityPackage }}.asc
             ${{ needs.prepare.outputs.unityPackage }}.zip
             ${{ needs.prepare.outputs.unityPackage }}.zip.asc
