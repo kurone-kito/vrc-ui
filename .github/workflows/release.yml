@@ -90,11 +90,11 @@ jobs:
       - name: Checkout Local Repository
         uses: actions/checkout@v4
       - name: Download package archive
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: ${{ needs.prepare.outputs.zipFile }}
       - name: Download UnityPackage
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: ${{ needs.prepare.outputs.unityPackage }}
       - name: copy the README and LICENSE files to the Package folder
