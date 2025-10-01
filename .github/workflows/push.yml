@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Local Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Run cspell
         uses: streetsidesoftware/cspell-action@v7
       - name: Run markdownlint

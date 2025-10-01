@@ -25,9 +25,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Local Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Checkout Automation Repository without removing prior checkouts
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           clean: false
           path: ${{ inputs.pathToCi }}

@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Local Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Zip the Package
         run: zip -r -9 "${{ github.workspace }}/${{ inputs.zipFile }}" .
         working-directory: "${{ inputs.packagePath }}"
