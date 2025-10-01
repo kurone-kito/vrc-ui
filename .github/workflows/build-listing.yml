@@ -53,7 +53,7 @@ jobs:
           enablement: true
           token: ${{ secrets.REPO_TOKEN }}
       - name: Upload the VPM Listing Website to GitHub Pages artifacts
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: Website
       - id: deployment
