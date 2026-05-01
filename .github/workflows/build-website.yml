@@ -48,7 +48,7 @@ jobs:
         name: Build Package Version Listing with Nuke
         run: '"${{ inputs.pathToCi }}/build.cmd" BuildRepoListing --root "${{ inputs.pathToCi }}" --list-publish-directory "$GITHUB_WORKSPACE/${{ inputs.listPublishDirectory }}" --current-package-name "${{ vars.PACKAGE_NAME }}"'
       - name: Upload listing artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           if-no-files-found: error
           name: listing-site

@@ -32,14 +32,14 @@ jobs:
           include-files: metaList
           package-path: ${{ inputs.unityPackage }}
       - name: Upload package archive
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           if-no-files-found: error
           name: ${{ inputs.zipFile }}
           path: ${{ inputs.zipFile }}
           retention-days: 1
       - name: Upload UnityPackage
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           if-no-files-found: error
           name: ${{ inputs.unityPackage }}
