@@ -115,7 +115,7 @@ jobs:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           tag: "${{ needs.prepare.outputs.version }}"
       - name: Publish the Release to GitHub
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: |
             ${{ needs.prepare.outputs.zipFile }}
