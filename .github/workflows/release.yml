@@ -44,7 +44,7 @@ jobs:
       - id: stable-match
         name: Detect whether the version is a stable release
         # cspell: disable-next-line
-        uses: kaisugi/action-regex-match@v1.0.1
+        uses: kaisugi/action-regex-match@v1.0.2
         with:
           flags: gm
           regex: ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$
