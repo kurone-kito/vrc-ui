@@ -35,7 +35,7 @@ jobs:
       - name: Deploy the global.json file
         run: cp "${{ github.workspace }}/global.json" "${{ inputs.pathToCi }}/"
       - name: Load cached data from previous runs
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj') }}
           path: |
