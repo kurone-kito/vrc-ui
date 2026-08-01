@@ -58,7 +58,7 @@ jobs:
           path: Website
       - id: deployment
         name: Deploy the uploaded VPM Listing Website to GitHub Pages
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
       - name: Trigger the action of the curation repository
         uses: peter-evans/repository-dispatch@v3
         with:
