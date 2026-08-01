@@ -17,7 +17,7 @@ jobs:
       - name: Run cspell
         uses: streetsidesoftware/cspell-action@v7
       - name: Run markdownlint
-        uses: DavidAnson/markdownlint-cli2-action@v20
+        uses: DavidAnson/markdownlint-cli2-action@v24
   package:
     permissions:
       actions: write
