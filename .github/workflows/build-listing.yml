@@ -48,7 +48,7 @@ jobs:
           name: listing-site
           path: Website
       - name: Prepare for GitHub Pages deployment
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
         with:
           enablement: true
           token: ${{ secrets.REPO_TOKEN }}
